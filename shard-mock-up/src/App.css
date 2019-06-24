@@ -1,18 +1,32 @@
-.App {
-  text-align: center;
-}
+/* .grand {
+  /* text-align: center;
+  clear: right; */
+  /* overflow: auto; */
+/* }  */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* .App-header {
+  background-color: white;
+  height: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+} */
+
+.top {
+  background-color: yellow;
+  height: 10%;
+  width: 100%;
+  overflow: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.body {
+  height: 90%;
+  width: 100%;
+  background-color: red;
+}
+
+.logout {
+  float: right;
 }

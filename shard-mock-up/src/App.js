@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 {/* <a
@@ -11,9 +10,12 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
+    <div className="container-fluid grand">
+      <div className="top">Settings
+        <a class="btn btn-primary my-3 logout" href="#" role="button">Log Out</a>
+      </div>
+     
+      <div className="body">Body</div>
     </div>
   );
 }
