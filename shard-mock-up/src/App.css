@@ -7,19 +7,7 @@
   width: calc(100vw - 3.5rem);
   display: flex;
   align-items: center;  
-}
-
-.setting {
-  /* display: flex; */
-  align-items: flex-start;
-}
-
-.logout {
-  display: flex;
-  /* flex-direction: row; */
-  justify-content: flex-end;
-  align-items: flex-end;
-  /* float: right; */
+  justify-content: space-between;
 }
 
 .leftNav {
@@ -51,7 +39,7 @@
   background-color: #3B60B0;
 }
 
-.sideNavItem :hover {
+.sideNavItem:hover {
   background-color: #110a5c;
 }
 

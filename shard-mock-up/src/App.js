@@ -6,29 +6,18 @@ function App() {
   return (
     <div>
 
-      <div className="row top">
-
-        <div className="setting">
-          <p className="my-auto"> Settings </p>
-        </div>
-
-        <div className="logout">
-          <a className="btn btn-primary" href="/" role="button"> Log Out </a>
-        </div>
-
+      <div className="top">
+        <p className="my-auto ml-3"> Settings </p>
+        <a className="btn btn-primary mr-3" href="/" role="button"> Log Out </a>
       </div>
-
 
       <LeftNav />
 
-
       <div className="container-fluid mainBody">
-        {/* <div className="container-fluid"> */}
           <div className="row">
             <div className="col-4 bodyLeft"> Left Body </div>
             <div className="col-8 bodyRight"> Right Body </div>
           </div>
-        {/* </div> */}
       </div>
 
     </div>
