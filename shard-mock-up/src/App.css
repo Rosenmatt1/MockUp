@@ -10,24 +10,59 @@
 
 .top {
   background-color: yellow;
-  height: 10%;
-  width: 100%;
-  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 3.5rem;
+  height: 3.5rem;
+  width: calc(100vw - 3.5rem);
 }
 
 .logout {
   float: right;
 }
 
+.leftNav {
+  background-color: pink;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 3.5rem;
+}
+
+.sideNavItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.5rem;
+  background-color: yellow;
+}
+
 .bodyLeft {
   background-color: red;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .bodyRight {
   background-color: red;
+  margin-right: 0;
+  margin-left: 0;
 }
 
-.leftNav {
-  background-color: pink;
-  height: 100vh;
+.mainBody {
+  margin-top: 3.5rem;
+  margin-left: 3.5rem;
+  margin-right: 0 !important;
+  width: calc(100vw - 3.5rem);
 }
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.container-fluid {
+  padding:0;
+}
+
