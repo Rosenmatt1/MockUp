@@ -15,9 +15,11 @@
   overflow: auto;
 }
 
-.body {
-  height: 90%;
-  width: 100%;
+.bodyLeft {
+  background-color: red;
+}
+
+.bodyRight {
   background-color: red;
 }
 

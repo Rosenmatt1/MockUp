@@ -6,8 +6,8 @@ function App() {
     <div className="container-fluid">
 
       <div className="row top">
-        <p classname="my-2"> Settings </p>
-        <a className="btn btn-primary my-2 logout" href="#" role="button"> Log Out </a>
+        <p className="my-2"> Settings </p>
+        <a className="btn btn-primary my-2 logout" href="/" role="button"> Log Out </a>
       </div>
 
       <div className="col-2 leftNav"> Left Nav
@@ -15,9 +15,12 @@ function App() {
         <i className="fas fa-search"> </i> 
       </div>
 
-      <div className="body"> Body </div>
-    
+      <div className="row body">
+        <div className="col-4 bodyLeft"> Left Body </div>
+        <div className="col-8 bodyRight"> Right Body </div>
       </div>
+    
+    </div>
 
       )
     }
