@@ -11,11 +11,17 @@ const LeftNav = (props) => {
         <i className="fas fa-search fa-lg icon"> </i>
       </div>
 
-      <div className="sideNavItem">
+      <div 
+        onClick={props.selectBox}
+        className={props.selectedBox ? "sideNavItemSelected" : "sideNavItem"} 
+      >
         <i className="fab fa-delicious fa-lg icon"> </i>
       </div>
 
-      <div className="sideNavItem">
+      <div 
+        onClick={props.selectAnalytics}
+        className={props.selectedAnalytics? "sideNavItemSelected" : "sideNavItem"} 
+      >
         <i className="fas fa-bars fa-lg icon"> </i>
       </div>
       
