@@ -1,16 +1,13 @@
 import React from 'react'
 import LeftNav from './components/LeftNav'
+import TopNav from './components/TopNav'
 import './App.css'
 
 function App() {
   return (
     <div>
 
-      <div className="top">
-        <p className="my-auto ml-4"> Settings </p>
-        <a className="btn btn-primary mr-4" href="/" role="button"> Log Out </a>
-      </div>
-
+      <TopNav />
       <LeftNav />
 
       <div className="container-fluid mainBody">
