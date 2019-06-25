@@ -1,13 +1,3 @@
-/* .App-header {
-  background-color: white;
-  height: 10%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-} */
-
 .top {
   background-color: yellow;
   position: fixed;
@@ -15,10 +5,22 @@
   left: 3.5rem;
   height: 3.5rem;
   width: calc(100vw - 3.5rem);
+  display: flex;
+  align-items: center;  
+  display: flex;
+}
+
+.setting {
+  /* display: flex; */
+  align-items: flex-start;
 }
 
 .logout {
-  float: right;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: flex-end;
+  align-items: flex-end;
+  /* float: right; */
 }
 
 .leftNav {
@@ -55,13 +57,13 @@
 }
 
 .bodyLeft {
-  background-color: red;
+  background-color: #D5DBE6;
   margin-right: 0;
   margin-left: 0;
 }
 
 .bodyRight {
-  background-color: red;
+  background-color: #D5DBE6;
   margin-right: 0;
   margin-left: 0;
 }
