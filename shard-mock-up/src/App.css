@@ -38,6 +38,10 @@
   background-color: lightblue;
 }
 
+.fa-search {
+  color: white;
+}
+
 .sideNavItem {
   display: flex;
   justify-content: center;
