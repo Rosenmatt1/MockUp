@@ -22,10 +22,33 @@ class App extends Component {
       selectedBox: false
     }) 
   }
-  
-  selectAlerts = () => { this.setState({ selectedAlerts: true }) }
-  selectAnalytics = () => { this.setState({ selectAnalytics: true }) }
-  selectBox = () => { this.setState({ selectBox: true }) }
+
+  selectAlerts = () => { 
+    this.setState({ 
+      selectedUser: false,
+      selectedAlerts: true,
+      selectedAnalytics: false,
+      selectedBox: false
+    }) 
+  }
+
+  selectAnalytics = () => { 
+    this.setState({ 
+      selectedUser: false,
+      selectedAlerts: false,
+      selectedAnalytics: true,
+      selectedBox: false
+    }) 
+  }
+
+  selectBox = () => { 
+    this.setState({ 
+      selectedUser: false,
+      selectedAlerts: false,
+      selectedAnalytics: false,
+      selectedBox: true
+    }) 
+  }
 
   render() {
     return (
