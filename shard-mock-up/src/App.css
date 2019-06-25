@@ -22,7 +22,7 @@
 }
 
 .leftNav {
-  background-color: pink;
+  background-color: #3B60B0;
   height: 100vh;
   top: 0;
   left: 0;
@@ -30,12 +30,20 @@
   width: 3.5rem;
 }
 
+.sideNavSearch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.5rem;
+  background-color: lightblue;
+}
+
 .sideNavItem {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 3.5rem;
-  background-color: yellow;
+  background-color: #3B60B0;
 }
 
 .bodyLeft {

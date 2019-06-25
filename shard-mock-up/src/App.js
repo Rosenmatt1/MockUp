@@ -11,6 +11,9 @@ function App() {
       </div>
 
       <div className="leftNav">
+        <div className="sideNavSearch">
+          <i className="fas fa-search"> </i>
+        </div>
         <div className="sideNavItem">
           <i className="fas fa-search"> </i>
         </div>
