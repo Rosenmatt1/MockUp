@@ -7,6 +7,10 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      selectedUser: false,
+      selectedAlert: false,
+      selectedAnalystics: false,
+      selectedBox: false
     }
   }
 

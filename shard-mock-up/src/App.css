@@ -47,6 +47,14 @@
   background-color: #110a5c;
 }
 
+.sideNavItemSelected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.5rem;
+  background-color: #110a5c;
+}
+
 .bodyLeft {
   background-color: #D5DBE6;
   margin-right: 0;
