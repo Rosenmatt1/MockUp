@@ -25,6 +25,10 @@ function App() {
           <i className="fas fa-bell fa-lg icon"> </i>
         </div>
 
+        <div className="sideNavItem">
+          <i className="fas fa-user-circle fa-lg icon"> </i>
+        </div>
+        
       </div>
       
       <div className="mainBody">
