@@ -1,24 +1,31 @@
-import React from 'react'
+import React, { Component } from 'react';
 import LeftNav from './components/LeftNav'
 import TopNav from './components/TopNav'
 import './App.css'
 
-function App() {
-  return (
-    <div>
+class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+    }
+  }
 
-      <TopNav />
-      <LeftNav />
+  render() {
+    return (
+      <div>
+        <TopNav />
+        <LeftNav />
 
-      <div className="container-fluid mainBody">
+        <div className="container-fluid mainBody">
           <div className="row">
             <div className="col-4 bodyLeft"> Left Body </div>
             <div className="col-8 bodyRight"> Right Body </div>
           </div>
+        </div>
+
       </div>
+    )
+  }
+  }
 
-    </div>
-  )
-}
-
-export default App
+  export default App
