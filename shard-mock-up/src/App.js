@@ -8,17 +8,39 @@ class App extends Component {
     super(props)
     this.state = {
       selectedUser: false,
-      selectedAlert: false,
-      selectedAnalystics: false,
+      selectedAlerts: false,
+      selectedAnalytics: false,
       selectedBox: false
     }
   }
+
+  selectUser = () => { 
+    this.setState({
+      selectedUser: true,
+      selectedAlerts: false,
+      selectedAnalytics: false,
+      selectedBox: false
+    }) 
+  }
+  
+  selectAlerts = () => { this.setState({ selectedAlerts: true }) }
+  selectAnalytics = () => { this.setState({ selectAnalytics: true }) }
+  selectBox = () => { this.setState({ selectBox: true }) }
 
   render() {
     return (
       <div>
         <TopNav />
-        <LeftNav />
+        <LeftNav 
+          selectedUser={this.state.selectedUser}
+          selectUser={this.selectUser}
+          selectedAlerts={this.state.selectedAlerts}
+          selectAlerts={this.selectAlerts}
+          selectedAnalytics={this.state.selectedAnalytics}
+          selectAnalytics={this.selectAnalytics}
+          selectedBox={this.state.selectedBox}
+          selectBox={this.selectBox}
+        />
 
         <div className="container-fluid mainBody">
           <div className="row">
@@ -26,6 +48,8 @@ class App extends Component {
             <div className="col-8 bodyRight"> Right Body </div>
           </div>
         </div>
+
+        {/* <a href="#" rel="noopener noreferrer"/> */}
 
       </div>
     )

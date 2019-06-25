@@ -4,7 +4,10 @@ const LeftNav = (props) => {
   return (
     <div className="leftNav">
 
-      <div className="sideNavSearch">
+      <div 
+        className="sideNavSearch"
+      
+      >
         <i className="fas fa-search fa-lg icon"> </i>
       </div>
 
@@ -15,9 +18,12 @@ const LeftNav = (props) => {
       <div className="sideNavItem">
         <i className="fas fa-bars fa-lg icon"> </i>
       </div>
-      {/* <a href="#" rel="noopener noreferrer"/> */}
+      
 
-      <div className="sideNavItem">
+      <div 
+        className={props.selectedUser ? "sideNavItemSelected" : "sideNavItem"} 
+        onClick={props.selectUser}
+      >
         <i className="fas fa-user-circle fa-lg icon"> </i>
       </div>
 
