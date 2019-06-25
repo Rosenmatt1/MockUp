@@ -10,12 +10,17 @@ import './App.css';
 
 function App() {
   return (
-    <div className="container-fluid grand">
-      <div className="top">Settings
-        <a class="btn btn-primary my-3 logout" href="#" role="button">Log Out</a>
+    <div className="container-fluid">
+
+      <div className="row top"> 
+        <p classname="my-2"> Settings </p>
+        <a className="btn btn-primary my-2 logout" href="#" role="button"> Log Out </a>
       </div>
+
+      <div className="col-1 leftNav">Left Nav</div>
      
       <div className="body">Body</div>
+
     </div>
   );
 }

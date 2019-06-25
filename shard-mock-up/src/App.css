@@ -1,9 +1,3 @@
-/* .grand {
-  /* text-align: center;
-  clear: right; */
-  /* overflow: auto; */
-/* }  */
-
 /* .App-header {
   background-color: white;
   height: 10%;
@@ -29,4 +23,9 @@
 
 .logout {
   float: right;
+}
+
+.leftNav {
+  background-color: pink;
+  height: 100%;
 }
