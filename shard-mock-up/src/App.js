@@ -7,8 +7,8 @@ function App() {
     <div>
 
       <div className="top">
-        <p className="my-auto ml-3"> Settings </p>
-        <a className="btn btn-primary mr-3" href="/" role="button"> Log Out </a>
+        <p className="my-auto ml-4"> Settings </p>
+        <a className="btn btn-primary mr-4" href="/" role="button"> Log Out </a>
       </div>
 
       <LeftNav />
