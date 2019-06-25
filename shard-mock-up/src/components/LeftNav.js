@@ -21,13 +21,16 @@ const LeftNav = (props) => {
       
 
       <div 
-        className={props.selectedUser ? "sideNavItemSelected" : "sideNavItem"} 
         onClick={props.selectUser}
+        className={props.selectedUser ? "sideNavItemSelected" : "sideNavItem"} 
       >
         <i className="fas fa-user-circle fa-lg icon"> </i>
       </div>
 
-      <div className="sideNavItem">
+      <div 
+        onClick={props.selectAlerts}
+        className={props.selectedAlerts ? "sideNavItemSelected" : "sideNavItem"} 
+        >
         <i className="fas fa-bell fa-lg icon"> </i>
       </div>
       
