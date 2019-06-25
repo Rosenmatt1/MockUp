@@ -7,7 +7,6 @@
   width: calc(100vw - 3.5rem);
   display: flex;
   align-items: center;  
-  display: flex;
 }
 
 .setting {
@@ -60,12 +59,14 @@
   background-color: #D5DBE6;
   margin-right: 0;
   margin-left: 0;
+  height: calc(100vh - 3.5rem);
 }
 
 .bodyRight {
   background-color: #D5DBE6;
   margin-right: 0;
   margin-left: 0;
+  height: calc(100vh - 3.5rem);
 }
 
 .mainBody {
