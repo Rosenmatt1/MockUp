@@ -76,14 +76,15 @@ class App extends Component {
             </div>
 
             <div className="col-8 bodyRight">
-              <div>
-
+              <div className="background">
                 <div><p> General Settings </p></div>
                 <div> Email <input /> </div>
                 <div> Commission Charges <input type="checkbox" />  Take into account apple commision charges (30%) </div>
                 <div> Tracking Expense <input /> per each install </div>
+                <a className="btn btn-primary" href="/" role="button"> Save Changes </a>
               </div>
             </div>
+            
           </div>
         </div>
 
