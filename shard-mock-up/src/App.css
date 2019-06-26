@@ -56,14 +56,14 @@
 }
 
 .bodyLeft {
-  background-color: #DDE5EF;
+  background-color: #F2F3F7;
   margin-right: 0;
   margin-left: 0;
   height: calc(100vh - 3.5rem);
 }
 
 .bodyRight {
-  background-color: #DDE5EF;
+  background-color: #F2F3F7;
   margin-right: 0;
   margin-left: 0;
   height: calc(100vh - 3.5rem);
@@ -92,5 +92,13 @@
   background-color: white;
   border-radius: 10px;
   padding: 1vw;
+}
+
+.text {
+  color: #9C9CA0;
+}
+
+a {
+  color: #7FA0E0;
 }
 

@@ -70,7 +70,7 @@ class App extends Component {
 
             <div className="col-4 bodyLeft">
               <h6> Systems </h6>
-              <p>Configure external fees and email that will be used as default address for notifications</p>
+              <p className="text">Configure external fees and email that will be used as default address for notifications</p>
               <a href="/" rel="noopener noreferrer"><p>How does Apple commission influence my statistic?</p></a>
               <a href="/" rel="noopener noreferrer"><p>How do attribution tracking expenses mean?</p></a>
             </div>
@@ -84,7 +84,7 @@ class App extends Component {
                 <a className="btn btn-primary" href="/" role="button"> Save Changes </a>
               </div>
             </div>
-            
+
           </div>
         </div>
 
