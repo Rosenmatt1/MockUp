@@ -4,10 +4,7 @@ const LeftNav = (props) => {
   return (
     <div className="leftNav">
 
-      <div 
-        className="sideNavSearch"
-      
-      >
+      <div className="sideNavSearch">
         <i className="fas fa-search fa-lg icon"> </i>
       </div>
 
