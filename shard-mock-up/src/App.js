@@ -78,6 +78,8 @@ class App extends Component {
             <div className="col-8 bodyRight">
               <div className="background">
                 <div className="text my-4"><p> General Settings </p></div>
+
+                <hr className="hrBoxes"/>
                 <div className="text my-4"> Email <input /> </div>
                 <div className="text my-4"> Commission Charges <input type="checkbox" />  Take into account apple commision charges (30%) </div>
                 <div className="text"> Tracking Expense <input /> per each install </div>
@@ -86,10 +88,10 @@ class App extends Component {
             </div>
 
           </div>
-
-          <hr />
-
         </div>
+
+        <hr className="hrUnits"/>
+
       </div>
     )
   }

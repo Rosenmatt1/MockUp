@@ -90,7 +90,7 @@
 
 .background {
   background-color: white;
-  border-radius: 10px;
+  border-radius: 6px;
   padding: 1vw;
 }
 
@@ -102,9 +102,14 @@ a {
   color: #7FA0E0;
 }
 
-hr {
+/* .hrUnits {
   border: 1px solid #9C9CA0;
-  width: calc(100vw - 3.5rem)
+  width: calc((100vw - 3.5rem) / 75%);
+} */
+
+.hrBoxes {
+ border: 1px solid #D5DBE6;
+ width: 100%;
 }
 
 .settingBut {
