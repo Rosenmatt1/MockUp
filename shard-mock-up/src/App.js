@@ -76,21 +76,21 @@ class App extends Component {
             </div>
 
             <div className="col-8 bodyRight">
-              <div className="background">
+              <div className="rightContent">
                 <div className="text my-4"><p> General Settings </p></div>
-
                 <hr className="hrBoxes"/>
                 <div className="text my-4"> Email <input /> </div>
                 <div className="text my-4"> Commission Charges <input type="checkbox" />  Take into account apple commision charges (30%) </div>
                 <div className="text"> Tracking Expense <input /> per each install </div>
-                <a className="btn btn-primary settingBut" href="/" role="button"> Save Changes </a>
+                <a className="btn btn-primary floatButtonRight" href="/" role="button"> Save Changes </a>
               </div>
             </div>
 
           </div>
+          <hr className="hrUnits"/>
         </div>
 
-        <hr className="hrUnits"/>
+        
 
       </div>
     )

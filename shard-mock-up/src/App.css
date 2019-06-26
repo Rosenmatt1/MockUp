@@ -56,27 +56,29 @@
 }
 
 .bodyLeft {
-  background-color: #F2F3F7;
   margin-right: 0;
   margin-left: 0;
-  height: calc(100vh - 3.5rem);
+  /* height: calc(100vh - 3.5rem); */
+  padding: 0;
 }
 
 .bodyRight {
-  background-color: #F2F3F7;
   margin-right: 0;
   margin-left: 0;
-  height: calc(100vh - 3.5rem);
+  /* height: calc(100vh - 3.5rem); */
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
+  padding: 0;
 }
 
 .mainBody {
+  background-color: #F2F3F7;
   margin-top: 3.5rem;
   margin-left: 3.5rem;
   margin-right: 0 !important;
   width: calc(100vw - 3.5rem);
+  padding: 1rem !important;
 }
 
 .row {
@@ -88,10 +90,13 @@
   padding:0;
 }
 
-.background {
+.rightContent {
   background-color: white;
   border-radius: 6px;
   padding: 1vw;
+  width: 100%;
+  /* margin: 1rem; */
+
 }
 
 .text {
@@ -102,17 +107,18 @@ a {
   color: #7FA0E0;
 }
 
-/* .hrUnits {
+.hrUnits {
   border: 1px solid #9C9CA0;
   width: calc((100vw - 3.5rem) / 75%);
-} */
+  margin: 1rem;
+}
 
 .hrBoxes {
  border: 1px solid #D5DBE6;
  width: 100%;
 }
 
-.settingBut {
+.floatButtonRight {
   float: right;
 }
 
