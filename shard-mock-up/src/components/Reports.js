@@ -1,9 +1,9 @@
-import React from 'react'
-import Reports from './Reports'
 
-const MainBody = (props) => {
+import React from 'react'
+
+const Reports = () => {
   return (
-    <div className="container-fluid mainBody">
+    <div>
       <div className="row">
 
         <div className="col-4 bodyLeft">
@@ -38,10 +38,13 @@ const MainBody = (props) => {
 
       </div>
       <hr className="hrUnits" />
-      <Reports />
-
-    </div >
+    </div>
   )
 }
 
-export default MainBody
+export default Reports
+
+
+
+
+
