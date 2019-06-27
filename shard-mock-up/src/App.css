@@ -93,7 +93,7 @@
 
 .rightContent {
   background-color: white;
-  border-radius: 6px;
+  border-radius: 5px;
   padding: 1vw;
   width: 100%;
 }
@@ -104,13 +104,19 @@
 }
 
 .textBox {
-  color: #9C9CA0; 
+  color: #242424; 
   font-size: 13px;
 }
 
 a {
   color: #7FA0E0;
   font-size: 13px;
+}
+
+.inputStyle {
+  border-radius: 5px;
+  border: 1px solid #DDE5EF;
+  color: #242424;
 }
 
 .hrUnits {

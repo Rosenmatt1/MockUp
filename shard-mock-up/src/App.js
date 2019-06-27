@@ -66,6 +66,21 @@ class App extends Component {
           selectBox={this.selectBox}
         />
         <MainBody />
+
+
+        {/* <div className="col-8 bodyRight">
+          <div className="rightContent">
+            <div className="textBox my-2"><p> General Settings </p></div>
+            <hr className="hrBoxes" />
+            <div className="textBox my-4"> Email <input className="inputStyle" placeholder="gregory.murynmukha@gmail.com" /> </div>
+            <div className="textBox my-4"> Commission Charges <input className="inputStyle" type="checkbox" />  Take into account Apple commision charges (30%) </div>
+            <div className="textBox"> Tracking Expense <input className="inputStyle" placeholder="$0.00" /> per each install </div>
+            <hr className="hrBoxes" />
+            <button className="btn btn-primary mr-1 floatButtonRight" href="/" role="button" disabled> Save Changes </button>
+          </div>
+        </div> */}
+
+
       </div>
     )
   }
