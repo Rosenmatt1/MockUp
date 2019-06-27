@@ -13,7 +13,7 @@ const Reports = () => {
         <div className="col-8 bodyRight">
           <div className="rightContent">
             <div className="row">
-              <div className="textBox my-4"> Icon </div>
+              <i className="fas fa-cloud-upload-alt textBox my-4"></i>
               <div className="textBox my-4"> Drop .csv document here or <a>choose file</a> to upload Appsflyer statistics </div>
             </div>
           </div>
