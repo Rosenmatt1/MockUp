@@ -20,7 +20,7 @@ const MainBody = (props) => {
             <div className="textBox my-4"> Commission Charges <input type="checkbox" />  Take into account Apple commision charges (30%) </div>
             <div className="textBox"> Tracking Expense <input /> per each install </div>
             <hr className="hrBoxes" />
-            <a className="btn btn-primary mr-1 floatButtonRight" href="/" role="button"> Save Changes </a>
+            <button className="btn btn-primary mr-1 floatButtonRight" href="/" role="button" disabled> Save Changes </button>
           </div>
         </div>
 
