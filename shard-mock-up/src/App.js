@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import LeftNav from './components/LeftNav'
 import TopNav from './components/TopNav'
+import MainBody from './components/MainBody'
 import './App.css'
 
 class App extends Component {
@@ -64,33 +65,7 @@ class App extends Component {
           selectedBox={this.state.selectedBox}
           selectBox={this.selectBox}
         />
-
-        <div className="container-fluid mainBody">
-          <div className="row">
-
-            <div className="col-4 bodyLeft">
-              <p className="mt-4"> System </p>
-              <p className="text">Configure external fees and email that will be used as default address for notifications</p>
-              <a href="/" rel="noopener noreferrer"><p>How does Apple commission influence my statistic?</p></a>
-              <a href="/" rel="noopener noreferrer"><p>How do attribution tracking expenses mean?</p></a>
-            </div>
-
-            <div className="col-8 bodyRight">
-              <div className="rightContent">
-                <div className="textBox my-2"><p> General Settings </p></div>
-                <hr className="hrBoxes"/>
-                <div className="textBox my-4"> Email <input /> </div>
-                <div className="textBox my-4"> Commission Charges <input type="checkbox" />  Take into account apple commision charges (30%) </div>
-                <div className="textBox"> Tracking Expense <input /> per each install </div>
-                <hr className="hrBoxes" />
-                <a className="btn btn-primary mr-1 floatButtonRight" href="/" role="button"> Save Changes </a>
-              </div>
-            </div>
-
-          </div>
-          <hr className="hrUnits"/>
-        </div>
-
+        <MainBody />
       </div>
     )
   }
