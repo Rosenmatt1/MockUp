@@ -27,7 +27,6 @@ const SearchAds = () => {
           </div>
         </div>
 
-        
       </div>
       <hr className="hrUnits" />
     </div>

@@ -3,12 +3,13 @@
   position: fixed;
   top: 0;
   left: 3.5rem;
-  height: 3.5rem;
+  height: calc(3.5rem + 2px);
   width: calc(100vw - 3.5rem);
   display: flex;
   align-items: center;  
   justify-content: space-between;
   z-index: 2;
+  border-bottom: 2px solid #F2F3F7;
 }
 
 .leftNav {
@@ -74,7 +75,6 @@
   /* padding: 0; */
   padding-top: 1rem;
   padding-bottom: 1rem;
- 
 }
 
 .mainBody {
