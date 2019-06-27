@@ -119,6 +119,17 @@ a {
   color: #242424;
 }
 
+/* .rightSetting {
+  width: 70%;
+} */
+
+.inputStyle1 {
+  border-radius: 5px;
+  border: 1px solid #DDE5EF;
+  color: #242424;
+  width: 100%;
+}
+
 .hrUnits {
   border: 1px solid #DDE5EF;
   width: calc((100vw - 3.5rem) / 75%);

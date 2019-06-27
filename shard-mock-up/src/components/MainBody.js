@@ -23,8 +23,8 @@ const MainBody = (props) => {
                 <div className="textBox my-4"> Commission Charges </div>
                 <div className="textBox"> Tracking Expense </div>
               </div>
-              <div>
-                <div className="textBox my-4"> <input className="inputStyle" placeholder="gregory.murynmukha@gmail.com" /> </div>
+              <div className="ml-4 rightSetting">
+                <div className="textBox my-4"> <input className="inputStyle1" placeholder="gregory.murynmukha@gmail.com" /> </div>
                 <div className="textBox my-4"><input className="inputStyle" type="checkbox" />  Take into account Apple commision charges (30%) </div>
                 <div className="textBox"> <input className="inputStyle" placeholder="$0.00" /> per each install </div>
               </div>
