@@ -14,21 +14,24 @@ const SearchAds = () => {
           <div className="rightContent">
 
             <div className="row">
-              <div className="textBox my-4"> Icon </div>
+              <i className="fas fa-circle my-4"></i>
               <div className="textBox my-4"> Joshua Moody </div>
+              <button className="btn btn-primary" href="/"> New Button </button>
             </div>
             <div className="textBox">Added May 21st 2017</div>
 
             <div className="row">
-              <div className="textBox my-4"> Icon </div>
+              <i class="fas fa-circle my-4"></i>
               <div className="textBox my-4"> Bernard Rhodes </div>
+              <button className="btn btn-primary" href="/"> New Button </button>
             </div>
             <div className="textBox">Added June 10th 2017</div>
 
             <div className="row">
-              <div className="textBox my-4"> Icon </div>
+              <i className="fas fa-cloud-upload-alt fa-5x textBox my-4"></i>
               <div className="textBox my-4"> Drop archive with API certificate here or choose <a>choose file</a> to add new account </div>
             </div>
+
           </div>
         </div>
 
