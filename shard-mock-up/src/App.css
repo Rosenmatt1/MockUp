@@ -112,6 +112,11 @@
   font-size: 13px;
 }
 
+.title {
+  color: #242424; 
+  font-size: 14px;
+}
+
 a {
   color: #7FA0E0;
   font-size: 13px;
@@ -124,8 +129,10 @@ a {
 }
 
 /* .rightSetting {
-  width: 70%;
-} */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: flex-start; */
+/* }  */
 
 .inputStyle1 {
   border-radius: 5px;
