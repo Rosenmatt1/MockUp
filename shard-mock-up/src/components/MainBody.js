@@ -1,5 +1,6 @@
 import React from 'react'
 import Reports from './Reports'
+import SearchAds from './SearchAds'
 
 const MainBody = (props) => {
   return (
@@ -39,6 +40,7 @@ const MainBody = (props) => {
       </div>
       <hr className="hrUnits" />
       <Reports />
+      <SearchAds />
 
     </div >
   )
