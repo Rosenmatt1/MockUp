@@ -10,6 +10,13 @@ class MainBody extends Component {
     }
   }
 
+  checkedSetting = () => {
+    console.log("Checked")
+    this.setState({
+      checked: !this.state.checked,
+    })
+  }
+
   render() {
     return (
       <div className="container-fluid mainBody" >
@@ -35,13 +42,18 @@ class MainBody extends Component {
                 </div>
                 <div className="ml-4 rightSetting">
                   <div className="textBox mb-4"> <input className="inputStyle1" placeholder="gregory.murynmukha@gmail.com" /> </div>
-                  <div className="textBox my-4"><input className="inputStyle" type="checkbox" />  Take into account Apple commision charges (30%) </div>
+                  <div className="textBox my-4"> <input className="inputStyle" onClick={this.checkedSetting} type="checkbox" />  Take into account Apple commision charges (30%) </div>
                   <div className="textBox"> <input className="inputStyle" placeholder="$0.00" /> per each install </div>
                 </div>
               </div>
 
               <hr className="hrBoxes" />
-              <button className="btn btn-primary mr-1 floatButtonRight" href="/" disabled> Save Changes </button>
+
+              {this.state.checked 
+                ? <button className="btn btn-primary mr-1 floatButtonRight" href="/"> Save Changes </button>
+                : <button className="btn btn-primary mr-1 floatButtonRight" href="/" disabled> Save Changes </button>
+              }
+
             </div>
           </div>
 
