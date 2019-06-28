@@ -115,6 +115,23 @@
   font-size: 13px;
 }
 
+.lightText {
+  color: #9C9CA0; 
+  font-size: 10px;
+}
+
+.lightIcon {
+  color: #D5DBE6;
+}
+
+.darkerGray {
+  color: #9C9CA0; 
+}
+
+.active {
+  color:green;
+}
+
 .title {
   color: #242424; 
   font-size: 14px;
