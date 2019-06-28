@@ -15,11 +15,11 @@ const SearchAds = (props) => {
 
             <div className="row py-3 spacer rightContent">
               <div className="row">
-                {props.active 
+                {props.active
                   ? <i className="fas fa-circle fa-sm active"></i>
-                : <i className="fas fa-circle fa-sm lightIcon"></i>
+                  : <i className="fas fa-circle fa-sm lightIcon"></i>
                 }
-                
+
                 <div className="ml-3">
                   <div className="textBox"> Joshua Moody </div>
                   <div className="lightText">Added May 21st 2017</div>
@@ -49,22 +49,28 @@ const SearchAds = (props) => {
               </div>
             </div>
 
-            {/* <div className="row mt-3 py-3 spacer rightContent">
-              <div className="row">
-                <i className="fas fa-circle fa-sm lightIcon"></i>
-                <div className="ml-3">
-                  <div className="textBox"> Eugene McCarthy </div>
-                  <div className="lightText"> Added June 10th 2017 </div>
+            {props.open
+              ? 
+              <div className="row mt-3 py-3 spacer rightContent">
+                <div className="row">
+                  <i className="fas fa-circle fa-sm lightIcon"></i>
+                  <div className="ml-3">
+                    <div className="textBox"> Eugene McCarthy </div>
+                    <div className="lightText"> Added June 10th 2017 </div>
+                  </div>
+                </div>
+                <div>
+                  <button className="btn btn-primary floatButtonRight" href="/"> Enable </button>
                 </div>
               </div>
-              <div>
-                <button className="btn btn-primary floatButtonRight" href="/"> Enable </button>
-              </div>
-            </div> */}
+              : <div></div>
+            }
 
-          <div className="row mt-3 py-4 rightContent">
+
+
+            <div className="row mt-3 py-4 rightContent">
               <i className="fas fa-cloud-upload-alt fa-lg darkerGray"></i>
-              <div className="text ml-3"> Drop archive with API certificate here or choose <a href="/">choose file</a> to add new account </div>
+              <div className="text ml-3"> Drop archive with API certificate here or choose <a onClick={props.openUser} href="/">choose file</a> to add new account </div>
             </div>
 
           </div>
