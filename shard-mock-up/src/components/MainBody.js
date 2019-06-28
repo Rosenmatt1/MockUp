@@ -10,6 +10,8 @@ class MainBody extends Component {
     this.state = {
       checked: false,
       password: false,
+      enteredPassword: "",
+      passwordError: false,
       progress: false,
       active: false,
       active2: false,
@@ -26,14 +28,25 @@ class MainBody extends Component {
 
   passwordCurrent = (e) => {
     this.setState({
+      enteredPassword: e.target.value,
       password: true,
     })
-    if (e.target.value.length <= 0) {
+    if (this.state.enteredPassword <= 0) {
       this.setState({
         password: false,
       })
     }
   }
+
+  passwordCheck = (e) => {
+    e.preventDefault()
+    if (this.state.enteredPassword < 6) {
+      console.log("rejected password")
+      this.setState({
+        passwordError: true,
+      })
+  }
+}
 
   progressActivation = (e) => {
     e.preventDefault()
@@ -134,6 +147,7 @@ class MainBody extends Component {
         <Access 
           password={this.state.password}
           passwordCurrent={this.passwordCurrent}
+          passwordCheck={this.passwordCheck}
         />
 
       </div >

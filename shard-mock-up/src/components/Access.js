@@ -31,8 +31,8 @@ const Access = (props) => {
             <hr className="hrBoxes" />
 
             {props.password
-              ? <button className="btn btn-primary mr-1 floatButtonRight" href="/"> Change Password </button>
-              : <button className="btn btn-primary mr-1 floatButtonRight" href="/" disabled> Save Changes </button>
+              ? <button className="btn btn-primary mr-1 floatButtonRight" onClick={props.passwordCheck}href="/"> Change Password </button>
+              : <button className="btn btn-primary mr-1 floatButtonRight" onClick={props.passwordCheck} href="/" disabled> Save Changes </button>
             }
           </div>
         </div>
