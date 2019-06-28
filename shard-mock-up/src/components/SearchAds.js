@@ -19,7 +19,6 @@ const SearchAds = (props) => {
                   ? <i className="fas fa-circle fa-sm active"></i>
                   : <i className="fas fa-circle fa-sm lightIcon"></i>
                 }
-
                 <div className="ml-3">
                   <div className="textBox"> Joshua Moody </div>
                   <div className="lightText">Added May 21st 2017</div>
@@ -32,13 +31,10 @@ const SearchAds = (props) => {
 
             <div className="row mt-3 py-3 spacer rightContent">
               <div className="row">
-
-
                 {props.active2
                   ? <i className="fas fa-circle fa-sm active"></i>
                   : <i className="fas fa-circle fa-sm lightIcon"></i>
                 }
-
                 <div className="ml-3">
                   <div className="textBox"> Bernard Rhodes </div>
                   <div className="lightText">Added June 10th 2017</div>
@@ -50,17 +46,20 @@ const SearchAds = (props) => {
             </div>
 
             {props.open
-              ? 
+              ?
               <div className="row mt-3 py-3 spacer rightContent">
                 <div className="row">
-                  <i className="fas fa-circle fa-sm lightIcon"></i>
+                  {props.active3
+                    ? <i className="fas fa-circle fa-sm active"></i>
+                    : <i className="fas fa-circle fa-sm lightIcon"></i>
+                  }
                   <div className="ml-3">
                     <div className="textBox"> Eugene McCarthy </div>
                     <div className="lightText"> Added June 10th 2017 </div>
                   </div>
                 </div>
                 <div>
-                  <button className="btn btn-primary floatButtonRight" href="/"> Enable </button>
+                  <button className="btn btn-primary floatButtonRight" onClick={props.enableActive3} href="/"> Enable </button>
                 </div>
               </div>
               : <div></div>
