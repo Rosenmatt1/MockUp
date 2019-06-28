@@ -148,6 +148,10 @@ a {
   color: #242424;
 }
 
+.progess {
+  width: 50%;
+}
+
 /* .rightSetting {
   /* display: flex; */
   /* justify-content: center; */

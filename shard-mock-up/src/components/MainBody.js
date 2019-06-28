@@ -7,13 +7,21 @@ class MainBody extends Component {
     super(props)
     this.state = {
       checked: false,
+      progress: false
     }
   }
 
   checkedSetting = () => {
-    console.log("Checked")
     this.setState({
       checked: !this.state.checked,
+    })
+  }
+
+  progressActivation = (e) => {
+    e.preventDefault()
+    console.log("Progress")
+    this.setState({
+      progress: !this.state.progress,
     })
   }
 
@@ -59,7 +67,17 @@ class MainBody extends Component {
 
         </div>
         <hr className="hrUnits" />
-        <Reports />
+
+        <div className="progress">
+          <div className="progress-bar" role="progressbar" aria-valuenow="25"
+            style={{ "width": "100%", "height": "2px" }}
+            aria-valuemin="0" aria-valuemax="100"> 25% </div>
+        </div>
+
+        <Reports 
+          progressActivation={this.progressActivation}
+          progress={this.state.progress}
+        />
         <SearchAds />
 
       </div >
