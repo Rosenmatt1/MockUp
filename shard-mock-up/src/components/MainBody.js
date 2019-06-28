@@ -8,7 +8,8 @@ class MainBody extends Component {
     this.state = {
       checked: false,
       progress: false,
-      active: false
+      active: false,
+      active2: false
     }
   }
 
@@ -33,6 +34,16 @@ class MainBody extends Component {
       active: !this.state.active,
     })
   }
+
+  enableActive2 = (e) => {
+    e.preventDefault()
+    console.log("Enable Function")
+    this.setState({
+      active2: !this.state.active2,
+    })
+  }
+
+
 
   render() {
     return (
@@ -90,6 +101,8 @@ class MainBody extends Component {
         <SearchAds 
           enableActive={this.enableActive}
           active={this.state.active}
+          enableActive2={this.enableActive2}
+          active2={this.state.active2}
         />
 
       </div >
