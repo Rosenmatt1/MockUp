@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Reports from './Reports'
 import SearchAds from './SearchAds'
+import Billing from './Billing'
 
 class MainBody extends Component {
   constructor(props) {
@@ -116,6 +117,7 @@ class MainBody extends Component {
           enableActive3={this.enableActive3}
           open={this.state.open}
         />
+        <Billing />
 
       </div >
     )
