@@ -15,7 +15,11 @@ const SearchAds = (props) => {
 
             <div className="row py-3 spacer rightContent">
               <div className="row">
-                <i className="fas fa-circle fa-sm lightIcon"></i>
+                {props.active 
+                  ? <i className="fas fa-circle fa-sm active"></i>
+                : <i className="fas fa-circle fa-sm lightIcon"></i>
+                }
+                
                 <div className="ml-3">
                   <div className="textBox"> Joshua Moody </div>
                   <div className="lightText">Added May 21st 2017</div>
