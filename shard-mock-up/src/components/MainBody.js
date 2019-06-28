@@ -9,6 +9,7 @@ class MainBody extends Component {
     super(props)
     this.state = {
       checked: false,
+      password: false,
       progress: false,
       active: false,
       active2: false,
@@ -21,6 +22,17 @@ class MainBody extends Component {
     this.setState({
       checked: !this.state.checked,
     })
+  }
+
+  passwordCurrent = (e) => {
+    this.setState({
+      password: true,
+    })
+    if (e.target.value.length <= 0) {
+      this.setState({
+        password: false,
+      })
+    }
   }
 
   progressActivation = (e) => {
@@ -119,7 +131,10 @@ class MainBody extends Component {
           open={this.state.open}
         />
         <Billing />
-        <Access />
+        <Access 
+          password={this.state.password}
+          passwordCurrent={this.passwordCurrent}
+        />
 
       </div >
     )
