@@ -167,14 +167,15 @@ a {
 
 .hrUnits {
   border: 1px solid #DDE5EF;
-  /* width: calc((100vw - 3.5rem) / 75%); */
+  width: calc((100vw - 3.5rem) / 75%);
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
 
 .hrBoxes {
  border: 1px solid #F2F3F7;
- width: 100%;
+ /* width: 100%; */
+ width: calc(100% + 1rem);
 }
 
 .floatButtonRight {
@@ -188,6 +189,17 @@ a {
 
 .active {
   color: green;
+}
+
+.userFlex {
+  display: flex;
+  align-items: center;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 

@@ -14,7 +14,7 @@ const SearchAds = (props) => {
           <div className="rightContentChunk">
 
             <div className="row py-3 spacer rightContent">
-              <div className="row">
+              <div className="row userFlex">
                 {props.active
                   ? <i className="fas fa-circle fa-sm active"></i>
                   : <i className="fas fa-circle fa-sm lightIcon"></i>
