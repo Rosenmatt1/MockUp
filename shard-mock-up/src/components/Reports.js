@@ -12,15 +12,14 @@ const Reports = (props) => {
 
         <div className="col-8 bodyRight">
           <div className="rightContent">
-            <div className="row">
+            <div className="row ml-2">
 
               <div>
                 <i className="fas fa-cloud-upload-alt fa-lg mt-4 darkerGray"></i>
               </div>
               <div className="text mt-4 ml-3"> Drop .csv document here or <a
-                  onClick={props.progressActivation} href="/">choose file</a> to upload Appsflyer statistics 
+                onClick={props.progressActivation} href="/">choose file</a> to upload Appsflyer statistics
               </div>
-              
 
               {/* {props.progress
                 ?
@@ -31,11 +30,14 @@ const Reports = (props) => {
                       aria-valuemin="0" aria-valuemax="100"> 25% </div>
                   </div>
                 </div>
-                :   
+                :
                 <div>
-                  <i className="fas fa-cloud-upload-alt fa-lg my-4 darkerGray"></i>
-                  <div className="text my-4 ml-3"> Drop .csv document here or <a
-                    onClick={props.progressActivation} href="/">choose file</a> to upload Appsflyer statistics </div>
+                  <div>
+                    <i className="fas fa-cloud-upload-alt fa-lg mt-4 darkerGray"></i>
+                  </div>
+                  <div className="text mt-4 ml-3"> Drop .csv document here or <a
+                    onClick={props.progressActivation} href="/">choose file</a> to upload Appsflyer statistics
+                  </div>
                 </div>
               } */}
 
