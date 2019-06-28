@@ -11,9 +11,9 @@ const SearchAds = () => {
         </div>
 
         <div className="col-8 bodyRight">
-          <div>
+          <div className="rightContentChunk">
 
-            <div className="row py-1 ml-2 spacer rightContent">
+            <div className="row py-3 spacer rightContent">
               <div className="row">
                 <i className="fas fa-circle fa-sm lightIcon"></i>
                 <div className="ml-3">
@@ -26,7 +26,7 @@ const SearchAds = () => {
               </div>
             </div>
 
-            {/* <div className="row py-1 ml-2 spacer">
+            <div className="row mt-3 py-3 spacer rightContent">
               <div className="row">
                 <i className="fas fa-circle fa-sm lightIcon"></i>
                 <div className="ml-3">
@@ -39,12 +39,12 @@ const SearchAds = () => {
               </div>
             </div>
 
-            <div className="row py-1 ml-2 spacer">
+            {/* <div className="row mt-3 py-3 spacer rightContent">
               <div className="row">
                 <i className="fas fa-circle fa-sm lightIcon"></i>
                 <div className="ml-3">
                   <div className="textBox"> Eugene McCarthy </div>
-                  <div className="lightText">Added June 10th 2017</div>
+                  <div className="lightText"> Added June 10th 2017 </div>
                 </div>
               </div>
               <div>
@@ -52,7 +52,7 @@ const SearchAds = () => {
               </div>
             </div> */}
 
-          <div className="row mt-3 ml-2 rightContent">
+          <div className="row mt-3 py-4 rightContent">
               <i className="fas fa-cloud-upload-alt fa-lg darkerGray"></i>
               <div className="text ml-3"> Drop archive with API certificate here or choose <a href="/">choose file</a> to add new account </div>
             </div>

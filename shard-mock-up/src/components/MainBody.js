@@ -7,7 +7,8 @@ class MainBody extends Component {
     super(props)
     this.state = {
       checked: false,
-      progress: false
+      progress: false,
+      disable: false
     }
   }
 
@@ -22,6 +23,14 @@ class MainBody extends Component {
     console.log("Progress")
     this.setState({
       progress: !this.state.progress,
+    })
+  }
+
+  enableActive = (e) => {
+    e.preventDefault()
+    console.log("Enable Function")
+    this.setState({
+      disable: !this.state.disable,
     })
   }
 
@@ -77,6 +86,8 @@ class MainBody extends Component {
         <Reports 
           progressActivation={this.progressActivation}
           progress={this.state.progress}
+          enableActive={this.enableActive}
+          disable={this.state.disable}
         />
         <SearchAds />
 

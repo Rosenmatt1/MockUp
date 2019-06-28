@@ -105,11 +105,10 @@
   width: 100%;
 }
 
-/* .rightContentChunk{
+.rightContentChunk{
   border-radius: 5px;
-  padding: 1rem;
   width: 100%;
-} */
+}
 
 .text {
   color: #9C9CA0; 
