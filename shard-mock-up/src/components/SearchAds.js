@@ -25,7 +25,7 @@ const SearchAds = (props) => {
                 </div>
               </div>
               <div>
-                <button className="btn btn-primary floatButtonRight" onClick={props.enableActive} href="/"> Enable </button>
+                <button className="btn btn-primary floatButtonRight" onClick={props.enableActive} href="/"> {!props.active ? "Enable" : "Disable"} </button>
               </div>
             </div>
 
@@ -41,7 +41,7 @@ const SearchAds = (props) => {
                 </div>
               </div>
               <div>
-                <button className="btn btn-primary floatButtonRight" onClick={props.enableActive2} href="/"> Enable </button>
+                <button className="btn btn-primary floatButtonRight" onClick={props.enableActive2} href="/"> {!props.active ? "Enable" : "Disable"} </button>
               </div>
             </div>
 
@@ -59,7 +59,7 @@ const SearchAds = (props) => {
                   </div>
                 </div>
                 <div>
-                  <button className="btn btn-primary floatButtonRight" onClick={props.enableActive3} href="/"> Enable </button>
+                  <button className="btn btn-primary floatButtonRight" onClick={props.enableActive3} href="/"> {!props.active ? "Enable" : "Disable"} </button>
                 </div>
               </div>
               : <div></div>

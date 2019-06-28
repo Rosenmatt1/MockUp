@@ -31,7 +31,6 @@ class MainBody extends Component {
 
   enableActive = (e) => {
     e.preventDefault()
-    console.log("Enable Function")
     this.setState({
       active: !this.state.active,
     })
@@ -39,7 +38,6 @@ class MainBody extends Component {
 
   enableActive2 = (e) => {
     e.preventDefault()
-    console.log("Enable Function")
     this.setState({
       active2: !this.state.active2,
     })
@@ -47,7 +45,6 @@ class MainBody extends Component {
 
   enableActive3 = (e) => {
     e.preventDefault()
-    console.log("Enable Function")
     this.setState({
       active3: !this.state.active3,
     })
