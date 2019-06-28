@@ -86,10 +86,11 @@ class MainBody extends Component {
         <Reports 
           progressActivation={this.progressActivation}
           progress={this.state.progress}
+        />
+        <SearchAds 
           enableActive={this.enableActive}
           disable={this.state.disable}
         />
-        <SearchAds />
 
       </div >
     )

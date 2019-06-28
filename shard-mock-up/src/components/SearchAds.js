@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SearchAds = () => {
+const SearchAds = (props) => {
   return (
     <div>
       <div className="row">
@@ -22,7 +22,7 @@ const SearchAds = () => {
                 </div>
               </div>
               <div>
-                <button className="btn btn-primary floatButtonRight" href="/"> Enable </button>
+                <button className="btn btn-primary floatButtonRight" onClick={props.enableActive} href="/"> Enable </button>
               </div>
             </div>
 
