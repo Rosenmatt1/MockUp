@@ -181,3 +181,8 @@ a {
   float: right;
 }
 
+.spacer {
+  display: flex;
+  justify-content: space-between;
+}
+

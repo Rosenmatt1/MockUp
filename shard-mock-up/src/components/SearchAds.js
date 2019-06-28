@@ -13,13 +13,18 @@ const SearchAds = () => {
         <div className="col-8 bodyRight">
           <div className="rightContent">
 
-            <div className="row py-1">
-              <i className="fas fa-circle fa-sm lightIcon"></i>
+            <div className="row py-1 spacer">
               <div>
-                <div className="textBox"> Joshua Moody </div>
-                <div className="lightText">Added May 21st 2017</div>
+                <i className="fas fa-circle fa-sm lightIcon"></i>
+                <div>
+                  <div className="textBox"> Joshua Moody </div>
+                  <div className="lightText">Added May 21st 2017</div>
+                </div>
               </div>
-              <button className="btn btn-primary floatButtonRight" href="/"> Enable </button>
+              
+              <div>
+                <button className="btn btn-primary floatButtonRight" href="/"> Enable </button>
+              </div>
             </div>
 
             <div className="row py-1">
