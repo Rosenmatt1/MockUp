@@ -14,24 +14,29 @@ const Reports = (props) => {
           <div className="rightContent">
             <div className="row ml-2">
 
-              <div>
-                <i className="fas fa-cloud-upload-alt fa-lg mt-4 darkerGray"></i>
-              </div>
-              <div className="text mt-4 ml-3"> Drop .csv document here or <a
-                onClick={props.progressActivation} href="/">choose file</a> to upload Appsflyer statistics
-              </div>
-
-              {/* {props.progress
+              {props.progress
                 ?
-                <div>
-                  <div className="progress">
-                    <div className="progress-bar" role="progressbar" aria-valuenow="25"
-                      style={{ "width": "100%", "height": "2px" }}
-                      aria-valuemin="0" aria-valuemax="100"> 25% </div>
+                <div className="fullWidth">
+                  <i className="fas fa-cloud-upload-alt fa-lg mt-4 darkerGray"></i>
+
+                  <div className="row spacer">
+                    <div className="darkerGray"> Uploading report_file_Q32017.csv </div>
+                    <p className="darkerGray"> 1 minute left </p>
                   </div>
+
+                  <div className="progress fullWidth">
+                    <div
+                      className="progress-bar"
+                      role="progressbar"
+                      style={{ "width": "25%" }}
+                      aria-valuemin="0"
+                      aria-valuemax="100"> 25%
+                    </div>
+                  </div>
+
                 </div>
                 :
-                <div>
+                <div className="row">
                   <div>
                     <i className="fas fa-cloud-upload-alt fa-lg mt-4 darkerGray"></i>
                   </div>
@@ -39,7 +44,7 @@ const Reports = (props) => {
                     onClick={props.progressActivation} href="/">choose file</a> to upload Appsflyer statistics
                   </div>
                 </div>
-              } */}
+              }
 
             </div>
           </div>

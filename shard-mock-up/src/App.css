@@ -174,8 +174,9 @@ a {
 
 .hrBoxes {
  border: 1px solid #F2F3F7;
- /* width: 100%; */
- width: calc(100% + 1rem);
+ width: 100%;
+ width: calc(100% + 2rem);
+ margin-left: -1rem;
 }
 
 .floatButtonRight {
@@ -200,6 +201,10 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.fullWidth {
+  width: 100%;
 }
 
 
