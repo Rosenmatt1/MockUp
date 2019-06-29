@@ -26,7 +26,7 @@ const Billing = (props) => {
                 <div className="textBox my-4"> <input className="mr-1 inputStyle" 
                 // onClick={this.checkedSetting} 
                 type="checkbox" />  Take into account Apple commision charges (30%) </div>
-                <div className="textBox"> <input className=" inputStyle" placeholder="$0.00" /> per each install </div>
+                <div className="textBox"> <input className="pl-2 inputStyle" placeholder="$0.00" /> per each install </div>
               </div>
             </div>
 

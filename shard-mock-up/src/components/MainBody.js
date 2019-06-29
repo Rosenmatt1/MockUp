@@ -112,7 +112,7 @@ class MainBody extends Component {
                 <div className="ml-2 flexColumn">
                   <div className="textBox"> <input className="pl-2 inputStyle1" placeholder="gregory.murynmukha@gmail.com" /> </div>
                   <div className="textBox my-4"> <input className="mr-1 inputStyle" onClick={this.checkedSetting} type="checkbox" />  Take into account Apple commision charges (30%) </div>
-                  <div className="textBox"> <input className=" inputStyle" placeholder="$0.00" /> per each install </div>
+                  <div className="textBox"> <input className="pl-2 inputStyle" placeholder="$0.00" /> per each install </div>
                 </div>
               </div>
 
