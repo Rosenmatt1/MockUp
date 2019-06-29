@@ -9,15 +9,18 @@ class MainBody extends Component {
     super(props)
     this.state = {
       checked: false,
-      inputEdit: false,
-      password: false,
-      enteredPassword: "",
-      passwordError: false,
       progress: false,
       active: false,
       active2: false,
       active3: false,
-      open: false
+      open: false,
+      password: false,
+      enteredPassword: "",
+      passwordError: false,
+      inputChange: false,
+      newPhone: "",
+      newZip: "",
+      
     }
   }
 
@@ -26,34 +29,6 @@ class MainBody extends Component {
       checked: !this.state.checked,
     })
   }
-
-  billingEdit = () => {
-    this.setState({
-      inputEdit: true,
-    })
-  }
-
-  passwordCurrent = (e) => {
-    this.setState({
-      enteredPassword: e.target.value,
-      password: true,
-    })
-    if (this.state.enteredPassword <= 0) {
-      this.setState({
-        password: false,
-      })
-    }
-  }
-
-  passwordCheck = (e) => {
-    e.preventDefault()
-    if (this.state.enteredPassword < 6) {
-      console.log("rejected password")
-      this.setState({
-        passwordError: true,
-      })
-  }
-}
 
   progressActivation = (e) => {
     e.preventDefault()
@@ -92,6 +67,56 @@ class MainBody extends Component {
     })
   }
 
+  capturePhone = (e) => {
+    this.setState({
+      newPhone: e.target.value,
+      phoneChange: true,
+    })
+    if (this.state.newPhone.length <= 0) {
+      console.log("phone is 0!")
+      this.setState({
+        phoneChange: false,
+      })
+    }
+    console.log(this.state.newPhone)
+    console.log(this.state.newPhone.length)
+  }
+
+  captureZip = (e) => {
+    this.setState({
+      newZip: e.target.value,
+      zipChange: true,
+    })
+    if (this.state.newZip.length <= 0) {
+      console.log(this.state.newZip.length)
+      this.setState({
+        zipChange: false,
+      })
+    }
+  }
+
+  passwordCurrent = (e) => {
+    this.setState({
+      enteredPassword: e.target.value,
+      password: true,
+    })
+    if (this.state.enteredPassword <= 0) {
+      this.setState({
+        password: false,
+      })
+    }
+  }
+
+  passwordCheck = (e) => {
+    e.preventDefault()
+    if (this.state.enteredPassword < 6) {
+      console.log("rejected password")
+      this.setState({
+        passwordError: true,
+      })
+    }
+  }
+
 
   render() {
     return (
@@ -125,7 +150,7 @@ class MainBody extends Component {
 
               <hr className="hrBoxes" />
 
-              {this.state.checked 
+              {this.state.checked
                 ? <button className="btn btn-primary mr-1 floatButtonRight" href="/"> Save Changes </button>
                 : <button className="btn btn-primary mr-1 floatButtonRight" href="/" disabled> Save Changes </button>
               }
@@ -136,11 +161,11 @@ class MainBody extends Component {
         </div>
         <hr className="hrUnits" />
 
-        <Reports 
+        <Reports
           progressActivation={this.progressActivation}
           progress={this.state.progress}
         />
-        <SearchAds 
+        <SearchAds
           enableActive={this.enableActive}
           active={this.state.active}
           enableActive2={this.enableActive2}
@@ -150,11 +175,12 @@ class MainBody extends Component {
           enableActive3={this.enableActive3}
           open={this.state.open}
         />
-        <Billing 
-          inputEdit={this.state.inputEdit}
-          billingEdit={this.billingEdit}
+        <Billing
+          inputChange={this.state.inputChange}
+          capturePhone={this.capturePhone}
+          captureZip={this.captureZip}
         />
-        <Access 
+        <Access
           password={this.state.password}
           passwordCurrent={this.passwordCurrent}
           passwordCheck={this.passwordCheck}

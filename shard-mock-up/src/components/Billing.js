@@ -23,24 +23,30 @@ const Billing = (props) => {
               </div>
               <div className="ml-2 flexColumn">
                 <div className="textBox">
-                  <input className="pl-2 inputStyle1" placeholder="Enter Name Here" value="Gregory Muryn-Mukha" />
+                  <input className="pl-2 inputStyle1" placeholder="Enter Name Here" 
+                  // value="Gregory Muryn-Mukha" 
+                  />
                 </div>
                 <div className="textBox my-4">
                   <input
-                    className="mr-1 inputStyle1"
+                    className="pl-2 inputStyle1"
                     placeholder="Enter Phone Here"
-                    onChange={props.billingEdit} 
+                    onChange={(e) => props.capturePhone(e)} 
                   /> 
                 </div>
                 <div className="textBox">
-                    <input className="pl-2 inputStyle1" placeholder="Enter Zip Here" />
+                    <input 
+                      className="pl-2 inputStyle1" 
+                      placeholder="Enter Zip Here" 
+                      onChange={(e) => props.captureZip(e)} 
+                      />
                   </div>
                 </div>
               </div>
 
               <hr className="hrBoxes" />
 
-              {props.inputEdit
+              {props.inputChange
               ? <button className="btn btn-primary mr-1 floatButtonRight" href="/"> Save Changes </button>
               : <button className="btn btn-primary mr-1 floatButtonRight" href="/" disabled> Save Changes </button>
             }
