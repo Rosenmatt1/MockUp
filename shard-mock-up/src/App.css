@@ -111,6 +111,10 @@
   width: 100%;
 }
 
+.negMargin {
+  margin-bottom: -1rem;
+}
+
 .text {
   color: #9C9CA0; 
   font-size: 13px;

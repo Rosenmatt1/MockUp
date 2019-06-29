@@ -12,7 +12,10 @@ const Billing = (props) => {
 
         <div className="col-8 bodyRight">
           <div className="rightContent">
-            <div className="title my-2 ml-2"><p> Billing Information </p></div>
+            <div className="row spacer negMargin">
+              <div className="title ml-2"><p> Billing Information </p></div>
+              <div className="title"><a href="/"><p> View Billing History </p> </a></div>
+            </div>
             <hr className="hrBoxes" />
 
             <div className="row">
@@ -23,7 +26,7 @@ const Billing = (props) => {
               </div>
               <div className="ml-2 flexColumn">
                 <div className="textBox">
-                  <input className="pl-2 inputStyle1" placeholder="Enter Name Here" 
+                  <input className="pl-2 inputStyle1" placeholder="Enter Name Here"
                   // value="Gregory Muryn-Mukha" 
                   />
                 </div>
@@ -31,33 +34,33 @@ const Billing = (props) => {
                   <input
                     className="pl-2 inputStyle1"
                     placeholder="Enter Phone Here"
-                    onChange={(e) => props.capturePhone(e)} 
-                  /> 
+                    onChange={(e) => props.capturePhone(e)}
+                  />
                 </div>
                 <div className="textBox">
-                    <input 
-                      className="pl-2 inputStyle1" 
-                      placeholder="Enter Zip Here" 
-                      onChange={(e) => props.captureZip(e)} 
-                      />
-                  </div>
+                  <input
+                    className="pl-2 inputStyle1"
+                    placeholder="Enter Zip Here"
+                    onChange={(e) => props.captureZip(e)}
+                  />
                 </div>
               </div>
+            </div>
 
-              <hr className="hrBoxes" />
+            <hr className="hrBoxes" />
 
-              {props.inputChange
+            {props.inputChange
               ? <button className="btn btn-primary mr-1 floatButtonRight" href="/"> Save Changes </button>
               : <button className="btn btn-primary mr-1 floatButtonRight" href="/" disabled> Save Changes </button>
             }
 
-            </div>
           </div>
-
         </div>
-        <hr className="hrUnits" />
+
       </div>
-      )
-    }
-    
+      <hr className="hrUnits" />
+    </div>
+  )
+}
+
 export default Billing
