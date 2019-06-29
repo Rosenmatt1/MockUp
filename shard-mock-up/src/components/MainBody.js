@@ -9,6 +9,7 @@ class MainBody extends Component {
     super(props)
     this.state = {
       checked: false,
+      inputEdit: false,
       password: false,
       enteredPassword: "",
       passwordError: false,
@@ -23,6 +24,12 @@ class MainBody extends Component {
   checkedSetting = () => {
     this.setState({
       checked: !this.state.checked,
+    })
+  }
+
+  billingEdit = () => {
+    this.setState({
+      inputEdit: true,
     })
   }
 
@@ -143,7 +150,10 @@ class MainBody extends Component {
           enableActive3={this.enableActive3}
           open={this.state.open}
         />
-        <Billing />
+        <Billing 
+          inputEdit={this.state.inputEdit}
+          billingEdit={this.billingEdit}
+        />
         <Access 
           password={this.state.password}
           passwordCurrent={this.passwordCurrent}

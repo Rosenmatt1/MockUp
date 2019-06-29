@@ -17,35 +17,41 @@ const Billing = (props) => {
 
             <div className="row">
               <div className="flexColumn ml-2">
-                <div className="textBox"> Email </div>
-                <div className="textBox my-4"> Commission Charges </div>
-                <div className="textBox"> Tracking Expense </div>
+                <div className="textBox"> Name </div>
+                <div className="textBox my-4"> Phone </div>
+                <div className="textBox"> Zip Code </div>
               </div>
               <div className="ml-2 flexColumn">
-                <div className="textBox"> <input className="pl-2 inputStyle1" placeholder="gregory.murynmukha@gmail.com" /> </div>
-                <div className="textBox my-4"> <input className="mr-1 inputStyle" 
-                // onClick={this.checkedSetting} 
-                type="checkbox" />  Take into account Apple commision charges (30%) </div>
-                <div className="textBox"> <input className="pl-2 inputStyle" placeholder="$0.00" /> per each install </div>
+                <div className="textBox">
+                  <input className="pl-2 inputStyle1" placeholder="Enter Name Here" value="Gregory Muryn-Mukha" />
+                </div>
+                <div className="textBox my-4">
+                  <input
+                    className="mr-1 inputStyle1"
+                    placeholder="Enter Phone Here"
+                    onChange={props.billingEdit} 
+                  /> 
+                </div>
+                <div className="textBox">
+                    <input className="pl-2 inputStyle1" placeholder="Enter Zip Here" />
+                  </div>
+                </div>
               </div>
-            </div>
 
-            <hr className="hrBoxes" />
+              <hr className="hrBoxes" />
 
-            {/* {this.state.checked
+              {props.inputEdit
               ? <button className="btn btn-primary mr-1 floatButtonRight" href="/"> Save Changes </button>
               : <button className="btn btn-primary mr-1 floatButtonRight" href="/" disabled> Save Changes </button>
-            } */}
+            }
 
-            <button className="btn btn-primary mr-1 floatButtonRight" href="/" disabled> Save Changes </button>
-
+            </div>
           </div>
+
         </div>
-
+        <hr className="hrUnits" />
       </div>
-      <hr className="hrUnits" />
-    </div>
-  )
-}
-
+      )
+    }
+    
 export default Billing
