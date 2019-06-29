@@ -162,15 +162,9 @@ a {
   border-radius: 5px;
   border: 1px solid #DDE5EF;
   color: #242424;
-  width: calc(100% + 3rem);
+  width: calc(100% + 7rem);
 }
 
-/* .inputStyle2 {
-  border-radius: 5px;
-  border: 1px solid #DDE5EF;
-  color: #242424;
-  width: calc(100% + 14rem);
-} */
 
 .hrUnits {
   border: 1px solid #DDE5EF;

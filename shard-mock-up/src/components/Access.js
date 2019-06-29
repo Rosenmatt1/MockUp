@@ -12,11 +12,11 @@ const Access = (props) => {
 
         <div className="col-8 bodyRight">
           <div className="rightContent">
-            <div className="title my-2"><p> General Settings </p></div>
+            <div className="title my-2 ml-2"><p> General Settings </p></div>
             <hr className="hrBoxes" />
 
             <div className="row">
-              <div className="flexColumn">
+              <div className="flexColumn ml-2">
                 <div className="textBox"> CurrentPassword </div>
                 <div className="textBox my-4"> New password </div>
                 <div className="textBox"> Confirm Password </div>
