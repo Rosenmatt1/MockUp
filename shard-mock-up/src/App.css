@@ -165,6 +165,13 @@ a {
   width: calc(100% + 3rem);
 }
 
+/* .inputStyle2 {
+  border-radius: 5px;
+  border: 1px solid #DDE5EF;
+  color: #242424;
+  width: calc(100% + 14rem);
+} */
+
 .hrUnits {
   border: 1px solid #DDE5EF;
   width: calc((100vw - 3.5rem) / 75%);
@@ -205,6 +212,13 @@ a {
 
 .fullWidth {
   width: 100%;
+}
+
+.eye {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
 }
 
 

@@ -22,7 +22,15 @@ const Access = (props) => {
                 <div className="textBox"> Confirm Password </div>
               </div>
               <div className="ml-4 flexColumn">
-                <div className="textBox"> <input className="pl-2 inputStyle1" onChange={(e) => props.passwordCurrent(e)} placeholder="Enter Current Password" /> </div>
+                <div className="textBox"> 
+                  <input 
+                  className="pl-2 inputStyle1 eye" 
+                  onChange={(e) => props.passwordCurrent(e)} 
+                  placeholder="&#xf06e;"
+                  type="text"
+                  /> 
+                </div>
+                               
                 <div className="textBox my-4"> <input className="pl-2 inputStyle1" placeholder="Enter New Password" /> </div>
                 <div className="textBox"> <input className="pl-2 inputStyle1" placeholder="Enter New Password" /> </div>
               </div>

@@ -14,7 +14,7 @@ const SearchAds = (props) => {
           <div className="rightContentChunk">
 
             <div className="row py-3 spacer rightContent">
-              <div className="row userFlex">
+              <div className="row ml-2 userFlex">
                 {props.active
                   ? <i className="fas fa-circle fa-sm active"></i>
                   : <i className="fas fa-circle fa-sm lightIcon"></i>
@@ -30,7 +30,7 @@ const SearchAds = (props) => {
             </div>
 
             <div className="row mt-3 py-3 spacer rightContent">
-              <div className="row">
+              <div className="row ml-2">
                 {props.active2
                   ? <i className="fas fa-circle fa-sm active"></i>
                   : <i className="fas fa-circle fa-sm lightIcon"></i>
@@ -48,7 +48,7 @@ const SearchAds = (props) => {
             {props.open
               ?
               <div className="row mt-3 py-3 spacer rightContent">
-                <div className="row">
+                <div className="row ml-2">
                   {props.active3
                     ? <i className="fas fa-circle fa-sm active"></i>
                     : <i className="fas fa-circle fa-sm lightIcon"></i>
@@ -66,9 +66,8 @@ const SearchAds = (props) => {
             }
 
 
-
             <div className="row mt-3 py-4 rightContent">
-              <i className="fas fa-cloud-upload-alt fa-lg darkerGray"></i>
+              <i className="ml-2 fas fa-cloud-upload-alt fa-lg darkerGray"></i>
               <div className="text ml-3"> Drop archive with API certificate here or choose <a onClick={props.openUser} href="/">choose file</a> to add new account </div>
             </div>
 
