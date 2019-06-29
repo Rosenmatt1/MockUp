@@ -46,7 +46,7 @@ const Access = (props) => {
         </div>
 
       </div>
-      <hr className="hrUnits" />
+     
     </div>
   )
 }
