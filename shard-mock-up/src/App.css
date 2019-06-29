@@ -162,7 +162,7 @@ a {
   border-radius: 5px;
   border: 1px solid #DDE5EF;
   color: #242424;
-  width: 100%;
+  width: calc(100% + 3rem);
 }
 
 .hrUnits {
