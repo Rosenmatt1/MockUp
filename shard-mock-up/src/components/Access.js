@@ -22,15 +22,15 @@ const Access = (props) => {
                 <div className="textBox"> Confirm Password </div>
               </div>
               <div className="ml-4 flexColumn">
-                <div className="textBox"> 
-                  <input 
-                  className="pl-2 inputStyle1 eye" 
-                  onChange={(e) => props.passwordCurrent(e)} 
-                  placeholder="&#xf06e;"
-                  type="text"
-                  /> 
+                <div className="textBox">
+                  <input
+                    className="pl-2 inputStyle1 eye"
+                    onChange={(e) => props.passwordCurrent(e)}
+                    placeholder="&#xf06e;"
+                    type="text"
+                  />
                 </div>
-                               
+
                 <div className="textBox my-4"> <input className="pl-2 inputStyle1" placeholder="Enter New Password" /> </div>
                 <div className="textBox"> <input className="pl-2 inputStyle1" placeholder="Enter New Password" /> </div>
               </div>
@@ -39,14 +39,18 @@ const Access = (props) => {
             <hr className="hrBoxes" />
 
             {props.password
-              ? <button className="btn btn-primary mr-1 floatButtonRight" onClick={props.passwordCheck}href="/"> Change Password </button>
+              ? <button className="btn btn-primary mr-1 floatButtonRight" onClick={props.passwordCheck} href="/"> Change Password </button>
               : <button className="btn btn-primary mr-1 floatButtonRight" onClick={props.passwordCheck} href="/" disabled> Save Changes </button>
             }
+
           </div>
         </div>
 
+        <div className="toasts p-2">
+          Appsflyer statistics has been updated.
+        </div>
+
       </div>
-     
     </div>
   )
 }

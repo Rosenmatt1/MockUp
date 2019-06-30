@@ -230,5 +230,15 @@ a {
   background-color: #DDE5EF;
 }
 
+.toasts {
+  background-color: gray;
+  color: #F2F3F7;
+  width: 20rem;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 1rem;
+  left: 5.5rem;
+}
+
 
 
