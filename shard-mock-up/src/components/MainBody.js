@@ -105,7 +105,7 @@ class MainBody extends Component {
 
   openCredit = () => {
     this.setState({
-      editCreditCard: true
+      editCreditCard: !this.state.editCreditCard
     })
   }
 

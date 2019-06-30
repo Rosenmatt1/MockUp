@@ -57,7 +57,6 @@ const Billing = (props) => {
               }
             </div>
 
-
             {props.editCreditCard
               ?
               <div className="rightContent pb-5">
@@ -77,11 +76,11 @@ const Billing = (props) => {
                     </div>
                   </div>
                 </div>
-
                 <hr className="hrBoxes" />
-
                 <div className="row floatButtonRight">
-                  <button className="btn grayButton mr-2" onClick={props.enableActive4} href="/">
+                  <button className="btn grayButton mr-2" 
+                  onClick={props.openCredit} 
+                  href="/">
                     Edit Card
               </button>
                   <button className="btn btn-primary negMar" href="/">
@@ -89,7 +88,6 @@ const Billing = (props) => {
               </button>
                 </div>
               </div>
-
               :
               <div className="row mt-3 py-3 spacer rightContent">
                 <div className="row ml-2">
@@ -110,17 +108,10 @@ const Billing = (props) => {
                 </button>
                 </div>
               </div>
-
             }
-
-
-
-
 
           </div>
         </div>
-
-
 
       </div>
       <hr className="hrUnits" />
