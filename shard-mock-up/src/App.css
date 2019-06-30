@@ -231,13 +231,16 @@ a {
 }
 
 .toasts {
-  background-color: gray;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  background-color: #242424;
   color: #F2F3F7;
-  width: 20rem;
   border-radius: 5px;
   position: fixed;
   bottom: 1rem;
   left: 5.5rem;
+  width: 20rem;
 }
 
 
