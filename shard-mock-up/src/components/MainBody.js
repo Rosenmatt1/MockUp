@@ -21,7 +21,8 @@ class MainBody extends Component {
       inputChange: false,
       newPhone: "",
       newZip: "",
-      editCreditCard: false
+      editCreditCard: false,
+      reportsToast: false
     }
   }
 
@@ -31,9 +32,17 @@ class MainBody extends Component {
     })
   }
 
+  reportsToastActivate = () => {
+    console.log("reportsToast!")
+    this.setState({
+      reportsToast: true,
+    })
+  }
+
   progressActivation = (e) => {
     e.preventDefault()
     console.log("Progress")
+    this.reportsToastActivate()
     this.setState({
       progress: !this.state.progress,
     })
@@ -203,6 +212,16 @@ class MainBody extends Component {
           passwordCurrent={this.passwordCurrent}
           passwordCheck={this.passwordCheck}
         />
+
+        {this.state.reportsToast
+        ?
+          <div className="toasts spacer p-3">
+            <div> Appsflyer statistics has been updated. </div>
+            <i className="fas fa-times"> </i>
+          </div>
+        :
+          <div></div>
+        }
 
       </div >
     )

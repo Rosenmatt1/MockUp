@@ -46,11 +46,6 @@ const Access = (props) => {
           </div>
         </div>
 
-        <div className="toasts spacer p-3">
-          <div> Appsflyer statistics has been updated. </div>
-          <i className="fas fa-times"> </i>
-        </div>
-
       </div>
     </div>
   )
