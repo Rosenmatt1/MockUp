@@ -59,7 +59,7 @@ const Billing = (props) => {
 
             {props.editCreditCard
               ?
-              <div className="rightContent pb-5">
+              <div className="rightContent mt-3 pb-5">
                 <div className="title ml-2"><p> Edit Card </p></div>
                 <hr className="hrBoxes" />
                 <div className="row">
@@ -83,7 +83,9 @@ const Billing = (props) => {
                   href="/">
                     Edit Card
               </button>
-                  <button className="btn btn-primary negMar" href="/">
+                  <button className="btn btn-primary negMar" 
+                    onClick={props.openCredit} 
+                  href="/">
                     Save Changes
               </button>
                 </div>
