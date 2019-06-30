@@ -24,6 +24,7 @@ class MainBody extends Component {
       editCreditCard: false,
       reportsToast: false,
       searchToast: false,
+      accountToast: false
     }
   }
 
@@ -98,7 +99,13 @@ class MainBody extends Component {
     setTimeout(() => {
       this.setState({
         searchToast: false,
+        accountToast: true
       })
+      setTimeout(() => {
+        this.setState({
+          accountToast: false
+        })
+      }, 2600)
     }, 2600)
   }
 
@@ -245,6 +252,16 @@ class MainBody extends Component {
           ?
           <div className="toasts spacer p-3">
             <div> Account hasn't been added because of invalid API certificates. </div>
+            <i className="fas fa-times"> </i>
+          </div>
+          :
+          <div></div>
+        }
+
+        {this.state.accountToast
+          ?
+          <div className="toasts spacer p-3">
+            <div> Account has been added successfully. </div>
             <i className="fas fa-times"> </i>
           </div>
           :
