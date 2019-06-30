@@ -46,6 +46,11 @@ class MainBody extends Component {
     this.setState({
       progress: !this.state.progress,
     })
+    setTimeout(() => {
+      this.setState({
+        reportsToast: false,
+      })
+    }, 2600)
   }
 
   enableActive = (e) => {
