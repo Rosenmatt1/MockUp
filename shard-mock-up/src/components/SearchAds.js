@@ -30,7 +30,7 @@ const SearchAds = (props) => {
             </div>
 
             <div className="row mt-3 py-3 spacer rightContent">
-              <div className="row ml-2">
+              <div className="row ml-2 userFlex">
                 {props.active2
                   ? <i className="fas fa-circle fa-sm active"></i>
                   : <i className="fas fa-circle fa-sm lightIcon"></i>
@@ -48,7 +48,7 @@ const SearchAds = (props) => {
             {props.open
               ?
               <div className="row mt-3 py-3 spacer rightContent">
-                <div className="row ml-2">
+                <div className="row ml-2 userFlex">
                   {props.active3
                     ? <i className="fas fa-circle fa-sm active"></i>
                     : <i className="fas fa-circle fa-sm lightIcon"></i>
