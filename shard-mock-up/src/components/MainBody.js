@@ -22,7 +22,8 @@ class MainBody extends Component {
       newPhone: "",
       newZip: "",
       editCreditCard: false,
-      reportsToast: false
+      reportsToast: false,
+      searchToast: false,
     }
   }
 
@@ -81,12 +82,24 @@ class MainBody extends Component {
     })
   }
 
+  searchToastActivate = () => {
+    this.setState({
+      searchToast: true,
+    })
+  }
+
   openUser = (e) => {
     e.preventDefault()
-    console.log("Open User")
+    console.log("Search Toast!")
+    this.searchToastActivate()
     this.setState({
       open: true,
     })
+    setTimeout(() => {
+      this.setState({
+        searchToast: false,
+      })
+    }, 2600)
   }
 
   capturePhone = (e) => {
@@ -225,6 +238,16 @@ class MainBody extends Component {
             <i className="fas fa-times"> </i>
           </div>
         :
+          <div></div>
+        }
+
+        {this.state.searchToast
+          ?
+          <div className="toasts spacer p-3">
+            <div> Account hasn't been added because of invalid API certificates. </div>
+            <i className="fas fa-times"> </i>
+          </div>
+          :
           <div></div>
         }
 
