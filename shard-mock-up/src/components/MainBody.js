@@ -21,7 +21,7 @@ class MainBody extends Component {
       inputChange: false,
       newPhone: "",
       newZip: "",
-      
+      editCreditCard: false
     }
   }
 
@@ -101,6 +101,12 @@ class MainBody extends Component {
         zipChange: false,
       })
     }
+  }
+
+  openCredit = () => {
+    this.setState({
+      editCreditCard: true
+    })
   }
 
   passwordCurrent = (e) => {
@@ -189,6 +195,8 @@ class MainBody extends Component {
           captureZip={this.captureZip}
           active4={this.state.active4}
           enableActive4={this.enableActive4}
+          editCreditCard={this.state.editCreditCard}
+          openCredit={this.openCredit}
         />
         <Access
           password={this.state.password}
