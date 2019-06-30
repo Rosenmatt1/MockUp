@@ -60,7 +60,7 @@ const Billing = (props) => {
             
             <div className="row mt-3 py-3 spacer rightContent">
               <div className="row ml-2">
-                {props.active2
+                {props.active4
                   ? <i className="fas fa-circle fa-sm active"></i>
                   : <i className="fas fa-circle fa-sm lightIcon"></i>
                 }
@@ -71,7 +71,7 @@ const Billing = (props) => {
               </div>
               <div>
                 <button className="btn  floatButtonRight grayButton"
-                  // onClick={props.enableActive2} 
+                  onClick={props.enableActive4} 
                   href="/">
                   Edit Card
                 </button>

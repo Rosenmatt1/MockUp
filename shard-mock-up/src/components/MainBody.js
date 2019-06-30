@@ -13,6 +13,7 @@ class MainBody extends Component {
       active: false,
       active2: false,
       active3: false,
+      active4: true,
       open: false,
       password: false,
       enteredPassword: "",
@@ -56,6 +57,13 @@ class MainBody extends Component {
     e.preventDefault()
     this.setState({
       active3: !this.state.active3,
+    })
+  }
+
+  enableActive4 = (e) => {
+    e.preventDefault()
+    this.setState({
+      active4: !this.state.active4,
     })
   }
 
@@ -179,6 +187,8 @@ class MainBody extends Component {
           inputChange={this.state.inputChange}
           capturePhone={this.capturePhone}
           captureZip={this.captureZip}
+          active4={this.state.active4}
+          enableActive4={this.enableActive4}
         />
         <Access
           password={this.state.password}
