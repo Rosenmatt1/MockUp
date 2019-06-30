@@ -211,10 +211,23 @@ a {
 }
 
 .eye {
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: inherit;
+  font-family: Arial, FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+}
+
+.negMar {
+  margin-top: -.25rem;
+}
+
+.grayButton {
+  background-color: #F2F3F7;
+  color: #9C9CA0;
+}
+
+.grayButton:hover {
+  background-color: #DDE5EF;
 }
 
 
