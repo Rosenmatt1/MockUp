@@ -178,7 +178,8 @@ class MainBody extends Component {
       enteredPassword: e.target.value,
       password: true,
     })
-    if (this.state.enteredPassword <= 0) {
+    if (this.state.enteredPassword.length <= 0) {
+      console.log("enteredPassword.length", this.state.enteredPassword.length)
       this.setState({
         password: false,
       })
@@ -187,8 +188,8 @@ class MainBody extends Component {
 
   passwordCheck = (e) => {
     e.preventDefault()
-    if (this.state.enteredPassword < 6) {
-      console.log("rejected password")
+    if (this.state.enteredPassword.length < 6) {
+      console.log("rejected password triggered")
       this.setState({
         passwordError: true,
       })
@@ -204,8 +205,9 @@ class MainBody extends Component {
   }
 
   showPassword = () => {
+    console.log(this.state.hidden)
     this.setState({
-      hidden: false
+      hidden: !this.state.hidden
     })
   }
 
@@ -283,6 +285,7 @@ class MainBody extends Component {
           passwordCheck={this.passwordCheck}
           hidden={this.state.hidden}
           showPassword={this.showPassword}
+          enteredPassword={this.state.enteredPassword}
       />
 
         {this.state.reportsToast

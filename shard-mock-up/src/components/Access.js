@@ -27,17 +27,18 @@ const Access = (props) => {
                     className="pl-2 inputStyle1 eye"
                     onChange={(e) => props.passwordCurrent(e)}
                     // placeholder="&#xf06e;"
-                    value="&#xf06e;"
-                    type={props.hidden ? "pasword" : "text"}
+                    // value="&#xf06e;"
+                    value={props.enteredPassword}
+                    type={props.hidden ? "password" : "text"}
                   />
                 </div>
-                {/* <i class="fas fa-eye"></i> */}
+                <i className="fas fa-eye" onClick={props.showPassword}></i>
 
                 <div className="textBox my-4">
                   <input
                     className="pl-2 inputStyle1"
                     placeholder="Enter New Password"
-                    type={props.hidden ? "pasword" : "text"}
+                    type={props.hidden ? "password" : "text"}
                   />
                 </div>
 
@@ -45,7 +46,7 @@ const Access = (props) => {
                   <input
                     className="pl-2 inputStyle1"
                     placeholder="Enter New Password"
-                    type={props.hidden ? "pasword" : "text"}
+                    type={props.hidden ? "password" : "text"}
                   />
                 </div>
 
