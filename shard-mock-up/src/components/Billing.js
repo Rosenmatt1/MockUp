@@ -69,7 +69,7 @@ const Billing = (props) => {
                 <hr className="hrBoxes" />
                 <div className="row">
                   <div className="flexColumn ml-2">
-                    <div className="text mr-3"> Card Details </div>
+                    <div className="textBox mr-3"> Card Details </div>
                   </div>
                   <div className="ml-2 flexColumn">
                     <div className="textBox">

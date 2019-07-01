@@ -24,7 +24,7 @@ const Access = (props) => {
 
               <div className="flexColumn right">
                 <div className="row textBox input-icons flexer">
-                  <i className="fas fa-eye icon-input lightIcon" onClick={props.showPassword}></i>
+                  <i className="fas fa-eye icon-input lightIcon ml-3" onClick={props.showPassword}></i>
                   <input
                     className="pl-2 input-field inputStyle1"
                     onChange={(e) => props.passwordCurrent(e)}
@@ -36,7 +36,7 @@ const Access = (props) => {
 
                 {props.passwordError
                   ?
-                  <div className="error">
+                  <div className="error mt-1">
                     Password length is not greater than 6 characters.
                 </div>
                   : <div></div>
@@ -44,7 +44,7 @@ const Access = (props) => {
 
                 <div className="textBox my-4">
                   <div className="row textBox input-icons flexer">
-                    <i className="fas fa-eye icon-input lightIcon" onClick={props.showPassword}></i>
+                    <i className="fas fa-eye icon-input lightIcon ml-3" onClick={props.showPassword}></i>
                     <input
                       className="pl-2 input-field inputStyle1"
                       placeholder="Enter New Password"
@@ -55,7 +55,7 @@ const Access = (props) => {
 
                 <div className="textBox">
                   <div className="row textBox input-icons flexer">
-                    <i className="fas fa-eye icon-input lightIcon" onClick={props.showPassword}></i>
+                    <i className="fas fa-eye icon-input lightIcon ml-3" onClick={props.showPassword}></i>
                     <input
                       className="pl-2 input-field inputStyle1"
                       placeholder="Enter New Password"

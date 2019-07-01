@@ -6,7 +6,7 @@ const SearchAds = (props) => {
       <div className="row">
 
         <div className="col-4 bodyLeft">
-          <p className="mt-4"> Search Ads Accounts </p>
+          <p className="mt-4"> Search ads accounts </p>
           <p className="text"> Last Updated Jul 25, 2017 10:23AM </p>
         </div>
 
