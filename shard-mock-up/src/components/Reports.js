@@ -15,13 +15,13 @@ const Reports = (props) => {
             
             {props.progress
               ?
-              <div className="row ml-2 fullWidth userFlex ">
+              <div className="row fullWidth userFlex">
 
-                <div >
-                  <i className="fas fa-cloud-upload-alt fa-lg mt-4 blueIcon darkerGray"></i>
+                <div className="pr-2 cloudContainer">
+                  <i className="fas fa-cloud-upload-alt fa-lg blueIcon darkerGray"></i>
                 </div>
 
-                <div>
+                <div className="progressContainer">
                   <div className="row spacer">
                     <div className="darkerGray"> Uploading report_file_Q32017.csv </div>
                     <p className="darkerGray"> 1 minute left </p>
@@ -39,11 +39,11 @@ const Reports = (props) => {
                 
               </div>
               :
-              <div className="row">
-                <div>
-                  <i className="fas fa-cloud-upload-alt fa-lg mt-4 darkerGray"></i>
+              <div className="row mt-4">
+                <div className="cloudContainer">
+                  <i className="fas fa-cloud-upload-alt fa-lg darkerGray"></i>
                 </div>
-                <div className="text mt-4 ml-3"> Drop .csv document here or <a
+                <div className="text progressContainer"> Drop .csv document here or <a
                   onClick={props.progressActivation} href="/">choose file</a> to upload Appsflyer statistics
                   </div>
               </div>

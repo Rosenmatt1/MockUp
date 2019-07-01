@@ -65,17 +65,20 @@ const SearchAds = (props) => {
               : <div></div>
             }
 
-          {props.progress2
-          ? 
+            {props.progress2
+              ?
               <div className="fullWidth">
-                <div className="userFlex">
+
+                <div className="userFlex mr-3">
                   <i className="fas fa-cloud-upload-alt fa-lg mt-4 blueIcon darkerGray"></i>
                 </div>
-                <div className="row spacer">
+
+                <div className=" ml-3 row spacer">
                   <div className="darkerGray"> Uploading api_certificates.zip </div>
                   <p className="darkerGray"> 1 minute left </p>
                 </div>
-                <div className="progress">
+
+                <div className="ml-2 progress">
                   <div
                     className="progress-bar"
                     role="progressbar"
@@ -89,8 +92,8 @@ const SearchAds = (props) => {
                 <i className="ml-2 fas fa-cloud-upload-alt fa-lg darkerGray"></i>
                 <div className="text ml-3"> Drop archive with API certificate here or choose <a onClick={props.openUser} href="/">choose file</a> to add new account </div>
               </div>
-          }
-            
+            }
+
 
 
           </div>

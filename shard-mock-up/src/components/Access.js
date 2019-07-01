@@ -16,18 +16,17 @@ const Access = (props) => {
             <hr className="hrBoxes" />
 
             <div className="row">
-              <div className="flexColumn ml-2">
+              <div className="pl-2 flexColumn left">
                 <div className="textBox"> CurrentPassword </div>
                 <div className="textBox my-4"> New password </div>
                 <div className="textBox"> Confirm Password </div>
               </div>
 
-              <div className="ml-4 flexColumn">
-
+              <div className="flexColumn right">
                 <div className="row textBox input-icons flexer">
                   <i className="fas fa-eye icon-input lightIcon" onClick={props.showPassword}></i>
                   <input
-                    className="pl-2 input-field"
+                    className="pl-2 input-field inputStyle1"
                     onChange={(e) => props.passwordCurrent(e)}
                     placeholder="Enter Current Password"
                     value={props.enteredPassword}
@@ -37,13 +36,12 @@ const Access = (props) => {
 
               {props.passwordError 
               ?
-                <div>
+                <div className="error">
                   Password length is not greater than 6 characters.
                 </div>
               : <div></div>
               }
                 
-
                 <div className="textBox my-4">
                   <input
                     className="pl-2 inputStyle1"
@@ -66,8 +64,8 @@ const Access = (props) => {
             <hr className="hrBoxes" />
 
             {props.password
-              ? <button className="btn btn-primary mr-1 floatButtonRight" onClick={props.passwordCheck} href="/"> Change Password </button>
-              : <button className="btn btn-primary mr-1 floatButtonRight" onClick={props.passwordCheck} href="/" disabled> Save Changes </button>
+              ? <button className="btn btn-primary floatButtonRight" onClick={props.passwordCheck} href="/"> Change Password </button>
+              : <button className="btn btn-primary floatButtonRight" onClick={props.passwordCheck} href="/" disabled> Save Changes </button>
             }
 
           </div>

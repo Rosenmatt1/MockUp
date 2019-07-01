@@ -121,6 +121,7 @@
 .textBox {
   color: #242424; 
   font-size: 13px;
+  width: 100%;
 }
 
 .lightText {
@@ -164,7 +165,7 @@ a {
   border-radius: 5px;
   border: 1px solid #DDE5EF;
   color: #242424;
-  width: calc(100% + 7rem);
+  width: 100%;
 }
 
 
@@ -268,6 +269,28 @@ a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+.error {
+  font-size: 10px;
+  color: red;
+}
+
+.left {
+  width: 25%
+}
+
+.right {
+  width: 75%
+}
+
+.cloudContainer {
+  display: flex;
+  width: 10%;
+}
+
+.progressContainer {
+  width: 90%;
 }
 
 
