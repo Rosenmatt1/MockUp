@@ -19,9 +19,9 @@ class MainBody extends Component {
       password: false,
       enteredPassword: "",
       passwordError: false,
-      inputChange: false,
       newPhone: "",
       newZip: "",
+      newName: "",
       editCreditCard: false,
       reportsToast: false,
       searchToast: false,
@@ -150,30 +150,43 @@ class MainBody extends Component {
     })
   }
 
+  captureName = (e) => {
+    this.setState({
+      newName: e.target.value,
+      nameChange: true,
+    }, () => {
+      if (this.state.newName.length <= 0) {
+        this.setState({
+          nameChange: false,
+        })
+      }
+    })
+  }
+
   capturePhone = (e) => {
     this.setState({
       newPhone: e.target.value,
       phoneChange: true,
+    }, () => {
+      if (this.state.newPhone.length <= 0) {
+        this.setState({
+          phoneChange: false,
+        })
+      }
     })
-    if (this.state.newPhone.length <= 0) {
-      console.log("phone is 0!")
-      this.setState({
-        phoneChange: false,
-      })
-    }
   }
 
   captureZip = (e) => {
     this.setState({
       newZip: e.target.value,
       zipChange: true,
+    }, () => {
+      if (this.state.newZip.length <= 0) {
+        this.setState({
+          zipChange: false,
+        })
+      }
     })
-    if (this.state.newZip.length <= 0) {
-      console.log(this.state.newZip.length)
-      this.setState({
-        zipChange: false,
-      })
-    }
   }
 
   openCredit = () => {
@@ -285,9 +298,12 @@ class MainBody extends Component {
           incrementor2={this.state.incrementor2}
         />
         <Billing
-          inputChange={this.state.inputChange}
+          newPhone={this.state.newPhone}
+          newZip={this.state.newZip}
+          newName={this.state.newName}
           capturePhone={this.capturePhone}
           captureZip={this.captureZip}
+          captureName={this.captureName}
           active4={this.state.active4}
           enableActive4={this.enableActive4}
           editCreditCard={this.state.editCreditCard}
@@ -337,6 +353,5 @@ class MainBody extends Component {
     )
   }
 }
-
 
 export default MainBody

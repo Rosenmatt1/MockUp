@@ -28,7 +28,10 @@ const Billing = (props) => {
                 </div>
                 <div className="flexColumn rightBill">
                   <div className="textBox ">
-                    <input className="pl-2 inputStyle1" placeholder="Enter Name Here"
+                    <input 
+                      className="pl-2 inputStyle1" 
+                      placeholder="Enter Name Here"
+                      onChange={(e) => props.captureName(e)}
                     />
                   </div>
                   <div className="textBox my-4 rightBillsmall">
@@ -50,7 +53,7 @@ const Billing = (props) => {
 
               <hr className="hrBoxes" />
 
-              {props.inputChange
+              {props.newName || props.newPhone || props.newZip
                 ? <button className="btn btn-primary mr-1 floatButtonRight negMar" href="/"> Save Changes </button>
                 : <button className="btn btn-primary mr-1 floatButtonRight negMar" href="/" disabled> Save Changes </button>
               }
