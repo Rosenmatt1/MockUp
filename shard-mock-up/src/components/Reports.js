@@ -12,18 +12,20 @@ const Reports = (props) => {
 
         <div className="col-8 bodyRight">
           <div className="rightContent">
-            <div className="row ml-2">
+            
+            {props.progress
+              ?
+              <div className="row ml-2 fullWidth userFlex ">
 
-              {props.progress
-                ?
-                <div className="fullWidth">
-                  <div className="userFlex">
-                    <i className="fas fa-cloud-upload-alt fa-lg mt-4 blueIcon darkerGray"></i>
+                <div >
+                  <i className="fas fa-cloud-upload-alt fa-lg mt-4 blueIcon darkerGray"></i>
+                </div>
+
+                <div>
+                  <div className="row spacer">
+                    <div className="darkerGray"> Uploading report_file_Q32017.csv </div>
+                    <p className="darkerGray"> 1 minute left </p>
                   </div>
-                    <div className="row spacer">
-                      <div className="darkerGray"> Uploading report_file_Q32017.csv </div>
-                      <p className="darkerGray"> 1 minute left </p>
-                    </div>
                   <div className="progress">
                     <div
                       className="progress-bar"
@@ -34,18 +36,19 @@ const Reports = (props) => {
                     </div>
                   </div>
                 </div>
-                :
-                <div className="row">
-                  <div>
-                    <i className="fas fa-cloud-upload-alt fa-lg mt-4 darkerGray"></i>
-                  </div>
-                  <div className="text mt-4 ml-3"> Drop .csv document here or <a
-                    onClick={props.progressActivation} href="/">choose file</a> to upload Appsflyer statistics
-                  </div>
+                
+              </div>
+              :
+              <div className="row">
+                <div>
+                  <i className="fas fa-cloud-upload-alt fa-lg mt-4 darkerGray"></i>
                 </div>
-              }
+                <div className="text mt-4 ml-3"> Drop .csv document here or <a
+                  onClick={props.progressActivation} href="/">choose file</a> to upload Appsflyer statistics
+                  </div>
+              </div>
+            }
 
-            </div>
           </div>
         </div>
 

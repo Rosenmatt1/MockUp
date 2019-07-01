@@ -210,13 +210,6 @@ a {
   width: 100%;
 }
 
-.eye {
-  font-family: Arial, FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: inherit;
-}
-
 .negMar {
   margin-top: -.25rem;
 }
@@ -253,21 +246,30 @@ a {
           
 .input-icons { 
   width: 100%; 
-  margin-bottom: 10px; 
 } 
           
 .icon-input { 
-  padding: 10px; 
-  color: green; 
+  color: #D5DBE6; 
   min-width: 50px; 
-  text-align: center; 
+  /* text-align: center;  */
+  float:right;
+} 
+
+.icon-input:hover { 
+  color: #9C9CA0; 
 } 
           
 .input-field { 
   width: 100%; 
-  padding: 10px; 
-  text-align: center; 
+  /* text-align: center;  */
 } 
+
+.flexer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
 
 
 
