@@ -22,9 +22,10 @@ const Access = (props) => {
                 <div className="textBox"> Confirm Password </div>
               </div>
               <div className="ml-4 flexColumn">
-                <div className="textBox">
+                <div className="textBox input-icons">
+                  <i className="fas fa-eye icon-input" onClick={props.showPassword}></i>
                   <input
-                    className="pl-2 inputStyle1 eye"
+                    className="pl-2 inputStyle1 eye input-field"
                     onChange={(e) => props.passwordCurrent(e)}
                     // placeholder="&#xf06e;"
                     // value="&#xf06e;"
@@ -32,7 +33,7 @@ const Access = (props) => {
                     type={props.hidden ? "password" : "text"}
                   />
                 </div>
-                <i className="fas fa-eye" onClick={props.showPassword}></i>
+                
 
                 <div className="textBox my-4">
                   <input
