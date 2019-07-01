@@ -20,15 +20,11 @@ const Reports = (props) => {
                   <div className="userFlex">
                     <i className="fas fa-cloud-upload-alt fa-lg mt-4 blueIcon darkerGray"></i>
                   </div>
-
-
                     <div className="row spacer">
                       <div className="darkerGray"> Uploading report_file_Q32017.csv </div>
                       <p className="darkerGray"> 1 minute left </p>
                     </div>
-                 
-
-                  <div className="progress fullWidth">
+                  <div className="progress">
                     <div
                       className="progress-bar"
                       role="progressbar"
@@ -37,8 +33,6 @@ const Reports = (props) => {
                       aria-valuemax="100"> {props.incrementor} %
                     </div>
                   </div>
-
-
                 </div>
                 :
                 <div className="row">

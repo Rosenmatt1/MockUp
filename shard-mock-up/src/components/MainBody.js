@@ -10,6 +10,7 @@ class MainBody extends Component {
     this.state = {
       checked: false,
       progress: false,
+      progress2: false,
       active: false,
       active2: false,
       active3: false,
@@ -105,13 +106,20 @@ class MainBody extends Component {
     console.log("Search Toast!")
     this.searchToastActivate()
     this.setState({
+      progress2: true,
+    })
+
+
+    this.setState({
       open: true,
     })
+
     setTimeout(() => {
       this.setState({
         searchToast: false,
         accountToast: true
       })
+
       setTimeout(() => {
         this.setState({
           accountToast: false
@@ -234,6 +242,7 @@ class MainBody extends Component {
           active3={this.state.active3}
           enableActive3={this.enableActive3}
           open={this.state.open}
+          progress2={this.state.progress2}
         />
         <Billing
           inputChange={this.state.inputChange}
