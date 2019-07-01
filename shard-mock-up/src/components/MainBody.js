@@ -179,7 +179,7 @@ class MainBody extends Component {
       password: true,
     })
     if (this.state.enteredPassword.length <= 0) {
-      console.log("enteredPassword.length", this.state.enteredPassword.length)
+      console.log("Password length 0", this.state.enteredPassword.length)
       this.setState({
         password: false,
       })
@@ -283,6 +283,7 @@ class MainBody extends Component {
           password={this.state.password}
           passwordCurrent={this.passwordCurrent}
           passwordCheck={this.passwordCheck}
+          passwordError={this.state.passwordError}
           hidden={this.state.hidden}
           showPassword={this.showPassword}
           enteredPassword={this.state.enteredPassword}

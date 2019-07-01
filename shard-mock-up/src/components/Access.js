@@ -27,13 +27,22 @@ const Access = (props) => {
                 <div className="row textBox input-icons flexer">
                   <i className="fas fa-eye icon-input lightIcon" onClick={props.showPassword}></i>
                   <input
-                    className="pl-2 eye input-field"
+                    className="pl-2 input-field"
                     onChange={(e) => props.passwordCurrent(e)}
                     placeholder="Enter Current Password"
                     value={props.enteredPassword}
                     type={props.hidden ? "password" : "text"}
                   />
                 </div>
+
+              {props.passwordError 
+              ?
+                <div>
+                  Password length is not greater than 6 characters.
+                </div>
+              : <div></div>
+              }
+                
 
                 <div className="textBox my-4">
                   <input
