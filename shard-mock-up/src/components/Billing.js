@@ -21,25 +21,25 @@ const Billing = (props) => {
               <hr className="hrBoxes" />
 
               <div className="row">
-                <div className="flexColumn ml-2">
+                <div className="flexColumn ml-2 leftBill">
                   <div className="textBox"> Name </div>
                   <div className="textBox my-4"> Phone </div>
                   <div className="textBox"> Zip Code </div>
                 </div>
-                <div className="ml-2 flexColumn">
-                  <div className="textBox">
+                <div className="flexColumn rightBill">
+                  <div className="textBox ">
                     <input className="pl-2 inputStyle1" placeholder="Enter Name Here"
                     // value="Gregory Muryn-Mukha" 
                     />
                   </div>
-                  <div className="textBox my-4">
+                  <div className="textBox my-4 rightBillsmall">
                     <input
                       className="pl-2 inputStyle1"
                       placeholder="Enter Phone Here"
                       onChange={(e) => props.capturePhone(e)}
                     />
                   </div>
-                  <div className="textBox">
+                  <div className="textBox rightBillsmall">
                     <input
                       className="pl-2 inputStyle1"
                       placeholder="Enter Zip Here"

@@ -284,6 +284,18 @@ a {
   width: 75%
 }
 
+.leftBill {
+  width: 20%
+}
+
+.rightBill {
+  width: 78%
+}
+
+.rightBillsmall {
+  width: 50%
+}
+
 .cloudContainer {
   display: flex;
   width: 9%;
