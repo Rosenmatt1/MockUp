@@ -64,15 +64,15 @@ const Billing = (props) => {
                 <hr className="hrBoxes" />
                 <div className="row">
                   <div className="flexColumn ml-2">
-                    <div className="textBox"> Card Details </div>
+                    <div className="text mr-3"> Card Details </div>
                   </div>
                   <div className="ml-2 flexColumn">
                     <div className="textBox">
-                      <row>
-                        <input className="pl-2 inputStyle" placeholder="0000 0000 0000 0000" />
-                        <input className="pl-2 inputStyle" placeholder="MM / YY" />
-                        <input className="pl-2 inputStyle" placeholder="CVC" />
-                      </row>
+                      <div className="row">
+                         <input className="pl-2 inputStyle" placeholder="0000 0000 0000 0000" /> 
+                         <input className="pl-2 inputStyle" placeholder="MM / YY" /> 
+                         <input className="pl-2 inputStyle" placeholder="CVC" /> 
+                      </div>
                     </div>
                   </div>
                 </div>

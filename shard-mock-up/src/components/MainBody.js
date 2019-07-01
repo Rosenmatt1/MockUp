@@ -24,7 +24,8 @@ class MainBody extends Component {
       editCreditCard: false,
       reportsToast: false,
       searchToast: false,
-      accountToast: false
+      accountToast: false,
+      incrementor: 0
     }
   }
 
@@ -43,11 +44,17 @@ class MainBody extends Component {
 
   progressActivation = (e) => {
     e.preventDefault()
-    console.log("Progress")
     this.reportsToastActivate()
     this.setState({
       progress: !this.state.progress,
     })
+    setInterval(() => {
+      this.setState({
+        incrementor: this.state.incrementor +1,
+      })
+      console.log("incrementor", this.state.incremontor)
+    }, 10)
+    
     setTimeout(() => {
       this.setState({
         reportsToast: false,
@@ -184,15 +191,15 @@ class MainBody extends Component {
               <hr className="hrBoxes" />
 
               <div className="row">
-                <div className="flexColumn ml-2">
+                <div className="flexColumn ml-4">
                   <div className="textBox"> Email </div>
                   <div className="textBox my-4"> Commission Charges </div>
                   <div className="textBox"> Tracking Expense </div>
                 </div>
-                <div className="ml-2 flexColumn">
+                <div className="ml-3 flexColumn">
                   <div className="textBox"> <input className="pl-2 inputStyle1" placeholder="gregory.murynmukha@gmail.com" /> </div>
                   <div className="textBox my-4"> <input className="mr-1 inputStyle" onClick={this.checkedSetting} type="checkbox" />  Take into account Apple commision charges (30%) </div>
-                  <div className="textBox"> <input className="pl-2 inputStyle" placeholder="$0.00" /> per each install </div>
+                  <div className="textBox"> <input className="pl-2 mr-2 inputStyle" placeholder="$0.00" /> per each install </div>
                 </div>
               </div>
 
@@ -212,6 +219,7 @@ class MainBody extends Component {
         <Reports
           progressActivation={this.progressActivation}
           progress={this.state.progress}
+          incrementor={this.state.incrementor}
         />
         <SearchAds
           enableActive={this.enableActive}
