@@ -53,7 +53,6 @@ class MainBody extends Component {
         incrementor: this.state.incrementor + 5,
       })
       if (this.state.incrementor >= 100) {
-        console.log("cleared at 100")
         clearInterval(setter)
         this.setState({
           reportsToast: true,
@@ -108,12 +107,8 @@ class MainBody extends Component {
       this.setState({
         incrementor2: this.state.incrementor2 + 5,
       })
-      console.log("Interval", this.state.incrementor2)
-      console.log("Times Clicked",this.state.timesClicked)
-      
       if (this.state.timesClicked > 1) {
         if (this.state.incrementor2 >= 100) {
-          console.log("triggered at 100")
           clearInterval(interval)
           this.setState({
             accountToast: true,
@@ -129,7 +124,6 @@ class MainBody extends Component {
         }
       } else {
         if (this.state.incrementor2 >= 100) {
-          console.log("triggered at 100")
           clearInterval(interval)
           this.setState({
             searchToast: true,
@@ -143,26 +137,18 @@ class MainBody extends Component {
           }, 2500)
         }
       }
-      
     }, 100)
   }
 
-  
-
   openUser = (e) => {
     e.preventDefault()
-    console.log("Search Toast!")
     this.setState({
       progress2: true,
       timesClicked: this.state.timesClicked + 1,
     }, () => {
-
       this.theIncrementor2()
     })
-
   }
-
-
 
   capturePhone = (e) => {
     this.setState({
@@ -175,8 +161,6 @@ class MainBody extends Component {
         phoneChange: false,
       })
     }
-    console.log(this.state.newPhone)
-    console.log(this.state.newPhone.length)
   }
 
   captureZip = (e) => {
@@ -203,9 +187,7 @@ class MainBody extends Component {
       enteredPassword: e.target.value,
       password: true,
     }, () => {
-      console.log("Password length", this.state.enteredPassword.length)
       if (this.state.enteredPassword.length <= 0) {
-        console.log("Password length 0", this.state.enteredPassword.length)
         this.setState({
           password: false,
         })
@@ -231,7 +213,6 @@ class MainBody extends Component {
   }
 
   showPassword = () => {
-    console.log(this.state.hidden)
     this.setState({
       hidden: !this.state.hidden
     })
