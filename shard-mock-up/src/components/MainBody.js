@@ -101,31 +101,40 @@ class MainBody extends Component {
     })
   }
 
+  // searchToastActivate = () => {
+  //   console.log("Search Toast!")
+    
+  // }
+
   openUser = (e) => {
     e.preventDefault()
     console.log("Search Toast!")
-    this.searchToastActivate()
     this.setState({
       progress2: true,
+      searchToast: true,
     })
-
-
-    this.setState({
-      open: true,
-    })
-
-    setTimeout(() => {
+    setInterval(() => {
       this.setState({
+        incrementor2: this.state.incrementor2 + 3,
+      })
+    }, 100)
+
+    if (this.state.incrementor >= 100) {
+      console.log("triggered at 100")
+      clearInterval(this.searchToastActivate)
+      this.setState({
+        progress2: false,
         searchToast: false,
-        accountToast: true
+        accountToast: true,
+        open: true,
       })
 
       setTimeout(() => {
         this.setState({
           accountToast: false
         })
-      }, 2600)
-    }, 2600)
+      }, 2500)
+    }
   }
 
   capturePhone = (e) => {
@@ -260,12 +269,12 @@ class MainBody extends Component {
         />
 
         {this.state.reportsToast
-        ?
+          ?
           <div className="toasts spacer p-3">
             <div> Appsflyer statistics has been updated. </div>
             <i className="fas fa-times"> </i>
           </div>
-        :
+          :
           <div></div>
         }
 
