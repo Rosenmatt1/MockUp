@@ -17,7 +17,7 @@ const Reports = (props) => {
               ?
               <div className="row fullWidth userFlex">
 
-                <div className="pr-2 cloudContainer">
+                <div className=" ml-2 cloudContainer">
                   <i className="fas fa-cloud-upload-alt fa-lg blueIcon darkerGray"></i>
                 </div>
 
@@ -39,7 +39,7 @@ const Reports = (props) => {
                 
               </div>
               :
-              <div className="row mt-4">
+              <div className="row ml-2 mt-4">
                 <div className="cloudContainer">
                   <i className="fas fa-cloud-upload-alt fa-lg darkerGray"></i>
                 </div>
