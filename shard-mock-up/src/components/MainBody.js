@@ -26,7 +26,9 @@ class MainBody extends Component {
       reportsToast: false,
       searchToast: false,
       accountToast: false,
-      incrementor: 0
+      incrementor: 0,
+      incrementor2: 0,
+      hidden: true
     }
   }
 
@@ -201,6 +203,11 @@ class MainBody extends Component {
     })
   }
 
+  showPassword = () => {
+    this.setState({
+      hidden: false
+    })
+  }
 
   render() {
     return (
@@ -274,7 +281,9 @@ class MainBody extends Component {
           password={this.state.password}
           passwordCurrent={this.passwordCurrent}
           passwordCheck={this.passwordCheck}
-        />
+          hidden={this.state.hidden}
+          showPassword={this.showPassword}
+      />
 
         {this.state.reportsToast
           ?
