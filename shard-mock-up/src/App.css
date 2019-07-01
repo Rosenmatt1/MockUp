@@ -158,7 +158,7 @@ a {
 }
 
 .progess {
-  width: 40%;
+  width: 100%;
 }
 
 .inputStyle1 {
@@ -304,6 +304,15 @@ a {
 .progressContainer {
   width: 86%;
 }
+
+.ccMonthWidth {
+  width: 20%
+}
+
+.ccCodeWidth {
+  width: 13%
+}
+
 
 
 

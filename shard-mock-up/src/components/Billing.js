@@ -29,7 +29,6 @@ const Billing = (props) => {
                 <div className="flexColumn rightBill">
                   <div className="textBox ">
                     <input className="pl-2 inputStyle1" placeholder="Enter Name Here"
-                    // value="Gregory Muryn-Mukha" 
                     />
                   </div>
                   <div className="textBox my-4 rightBillsmall">
@@ -70,8 +69,8 @@ const Billing = (props) => {
                     <div className="textBox">
                       <div className="row">
                          <input className="pl-2 inputStyle" placeholder="0000 0000 0000 0000" /> 
-                         <input className="pl-2 inputStyle" placeholder="MM / YY" /> 
-                         <input className="pl-2 inputStyle" placeholder="CVC" /> 
+                        <input className="pl-2 mx-1 inputStyle ccMonthWidth" placeholder="MM / YY" /> 
+                        <input className="pl-2 inputStyle ccCodeWidth" placeholder="CVC" /> 
                       </div>
                     </div>
                   </div>
