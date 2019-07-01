@@ -157,7 +157,7 @@ a {
 }
 
 .progess {
-  width: 50%;
+  width: 40%;
 }
 
 .inputStyle1 {
@@ -241,6 +241,10 @@ a {
   bottom: 1rem;
   left: 5.5rem;
   width: 20rem;
+}
+
+.blueIcon {
+  color: #3B60B0;
 }
 
 

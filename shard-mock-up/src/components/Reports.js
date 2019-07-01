@@ -17,13 +17,16 @@ const Reports = (props) => {
               {props.progress
                 ?
                 <div className="fullWidth">
-                  <i className="fas fa-cloud-upload-alt fa-lg mt-4 darkerGray"></i>
-                  
-
-                  <div className="row spacer">
-                    <div className="darkerGray"> Uploading report_file_Q32017.csv </div>
-                    <p className="darkerGray"> 1 minute left </p>
+                  <div className="userFlex">
+                    <i className="fas fa-cloud-upload-alt fa-lg mt-4 blueIcon darkerGray"></i>
                   </div>
+
+
+                    <div className="row spacer">
+                      <div className="darkerGray"> Uploading report_file_Q32017.csv </div>
+                      <p className="darkerGray"> 1 minute left </p>
+                    </div>
+                 
 
                   <div className="progress fullWidth">
                     <div
@@ -31,10 +34,11 @@ const Reports = (props) => {
                       role="progressbar"
                       style={{ "width": props.incrementor }}
                       aria-valuemin="0"
-                      aria-valuemax="100"> {props.incrementor}
+                      aria-valuemax="100"> {props.incrementor} %
                     </div>
                   </div>
-                
+
+
                 </div>
                 :
                 <div className="row">

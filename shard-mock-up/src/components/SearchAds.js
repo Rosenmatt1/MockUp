@@ -41,7 +41,7 @@ const SearchAds = (props) => {
                 </div>
               </div>
               <div>
-                <button className="btn floatButtonRight grayButton" onClick={props.enableActive2} href="/"> {!props.active ? "Enable" : "Disable"} </button>
+                <button className="btn floatButtonRight grayButton" onClick={props.enableActive2} href="/"> {!props.active2 ? "Enable" : "Disable"} </button>
               </div>
             </div>
 
@@ -49,7 +49,7 @@ const SearchAds = (props) => {
               ?
               <div className="row mt-3 py-3 spacer rightContent">
                 <div className="row ml-2 userFlex">
-                  {props.active3
+                  {!props.active3
                     ? <i className="fas fa-circle fa-sm active"></i>
                     : <i className="fas fa-circle fa-sm lightIcon"></i>
                   }
@@ -59,12 +59,11 @@ const SearchAds = (props) => {
                   </div>
                 </div>
                 <div>
-                  <button className="btn floatButtonRight grayButton" onClick={props.enableActive3} href="/"> {!props.active ? "Enable" : "Disable"} </button>
+                  <button className="btn floatButtonRight grayButton" onClick={props.enableActive3} href="/"> {!props.active3 ? "Disable" : "Enable"} </button>
                 </div>
               </div>
               : <div></div>
             }
-
 
             <div className="row mt-3 py-4 rightContent">
               <i className="ml-2 fas fa-cloud-upload-alt fa-lg darkerGray"></i>

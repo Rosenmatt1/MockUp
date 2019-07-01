@@ -35,31 +35,35 @@ class MainBody extends Component {
     })
   }
 
-  reportsToastActivate = () => {
-    console.log("reportsToast!")
-    this.setState({
-      reportsToast: true,
-    })
-  }
-
   progressActivation = (e) => {
     e.preventDefault()
-    this.reportsToastActivate()
     this.setState({
-      progress: !this.state.progress,
+      progress: true,
     })
+    this.theIncrementor()
+  }
+
+  theIncrementor = () => {
     setInterval(() => {
       this.setState({
-        incrementor: this.state.incrementor +1,
+        incrementor: this.state.incrementor + 3,
       })
-      console.log("incrementor", this.state.incremontor)
-    }, 10)
-    
-    setTimeout(() => {
+    }, 100)
+    console.log("The Incrementor")
+
+    if (this.state.incrementor >= 100) {
+      console.log("cleared at 100")
+      clearInterval(this.theIncrementor)
       this.setState({
-        reportsToast: false,
+        reportsToast: true,
       })
-    }, 2600)
+      setTimeout(() => {
+        this.setState({
+          reportsToast: false,
+          progress: false,
+        })
+      }, 2500)
+    }
   }
 
   enableActive = (e) => {
