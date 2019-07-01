@@ -28,7 +28,8 @@ class MainBody extends Component {
       accountToast: false,
       incrementor: 0,
       incrementor2: 0,
-      hidden: true
+      hidden: true,
+      timesClicked: 0
     }
   }
 
@@ -57,7 +58,7 @@ class MainBody extends Component {
         this.setState({
           reportsToast: true,
           incrementor: 0,
-          // progress: false,
+          progress: false,
         })
         setTimeout(() => {
           this.setState({
@@ -102,41 +103,66 @@ class MainBody extends Component {
     })
   }
 
-  // searchToastActivate = () => {
-  //   console.log("Search Toast!")
-    
-  // }
+  theIncrementor2 = () => {
+    let interval = setInterval(() => {
+      this.setState({
+        incrementor2: this.state.incrementor2 + 5,
+      })
+      console.log("Interval", this.state.incrementor2)
+      console.log("Times Clicked",this.state.timesClicked)
+      
+      if (this.state.timesClicked > 1) {
+        if (this.state.incrementor2 >= 100) {
+          console.log("triggered at 100")
+          clearInterval(interval)
+          this.setState({
+            accountToast: true,
+            progress2: false,
+            open: true,
+            timesClicked: 0
+          })
+          setTimeout(() => {
+            this.setState({
+              accountToast: false
+            })
+          }, 2500)
+        }
+      } else {
+        if (this.state.incrementor2 >= 100) {
+          console.log("triggered at 100")
+          clearInterval(interval)
+          this.setState({
+            searchToast: true,
+            progress2: false,
+            incrementor2: 0,
+          })
+          setTimeout(() => {
+            this.setState({
+              searchToast: false
+            })
+          }, 2500)
+        }
+      }
+      
+    }, 100)
+  }
+
+  
 
   openUser = (e) => {
     e.preventDefault()
     console.log("Search Toast!")
     this.setState({
       progress2: true,
-      searchToast: true,
+      timesClicked: this.state.timesClicked + 1,
+    }, () => {
+
+      this.theIncrementor2()
     })
-    setInterval(() => {
-      this.setState({
-        incrementor2: this.state.incrementor2 + 3,
-      })
-    }, 100)
 
-    if (this.state.incrementor >= 100) {
-      console.log("triggered at 100")
-      clearInterval(this.searchToastActivate)
-      this.setState({
-        progress2: false,
-        searchToast: false,
-        accountToast: true,
-        open: true,
-      })
-
-      setTimeout(() => {
-        this.setState({
-          accountToast: false
-        })
-      }, 2500)
-    }
   }
+
+
 
   capturePhone = (e) => {
     this.setState({
@@ -177,13 +203,13 @@ class MainBody extends Component {
       enteredPassword: e.target.value,
       password: true,
     }, () => {
-        console.log("Password length", this.state.enteredPassword.length)
-        if (this.state.enteredPassword.length <= 0) {
-          console.log("Password length 0", this.state.enteredPassword.length)
-          this.setState({
-            password: false,
-          })
-        }
+      console.log("Password length", this.state.enteredPassword.length)
+      if (this.state.enteredPassword.length <= 0) {
+        console.log("Password length 0", this.state.enteredPassword.length)
+        this.setState({
+          password: false,
+        })
+      }
     })
   }
 
@@ -235,14 +261,14 @@ class MainBody extends Component {
                   <div className="textBox"> Tracking Expense </div>
                 </div>
                 <div className="flexColumn right">
-                  <div className="textBox"> 
-                    <input className="pl-2 inputStyle1" placeholder="gregory.murynmukha@gmail.com" /> 
+                  <div className="textBox">
+                    <input className="pl-2 inputStyle1" placeholder="gregory.murynmukha@gmail.com" />
                   </div>
-                  <div className="textBox my-4"> 
-                    <input className="mr-1 inputStyle" onClick={this.checkedSetting} type="checkbox" />  Take into account Apple commision charges (30%) 
+                  <div className="textBox my-4">
+                    <input className="mr-1 inputStyle" onClick={this.checkedSetting} type="checkbox" />  Take into account Apple commision charges (30%)
                   </div>
-                  <div className="textBox"> 
-                    <input className="pl-2 mr-2 inputStyle" placeholder="$0.00" /> per each install 
+                  <div className="textBox">
+                    <input className="pl-2 mr-2 inputStyle" placeholder="$0.00" /> per each install
                   </div>
                 </div>
               </div>
@@ -275,6 +301,7 @@ class MainBody extends Component {
           enableActive3={this.enableActive3}
           open={this.state.open}
           progress2={this.state.progress2}
+          incrementor2={this.state.incrementor2}
         />
         <Billing
           inputChange={this.state.inputChange}
@@ -293,7 +320,7 @@ class MainBody extends Component {
           hidden={this.state.hidden}
           showPassword={this.showPassword}
           enteredPassword={this.state.enteredPassword}
-      />
+        />
 
         {this.state.reportsToast
           ?

@@ -67,26 +67,28 @@ const SearchAds = (props) => {
 
             {props.progress2
               ?
-              <div className="fullWidth">
+              <div className="row fullWidth userFlex rightContent mt-3">
 
-                <div className="userFlex mr-3">
-                  <i className="fas fa-cloud-upload-alt fa-lg mt-4 blueIcon darkerGray"></i>
+                <div className=" ml-2 cloudContainer">
+                  <i className="fas fa-cloud-upload-alt fa-lg blueIcon darkerGray"></i>
                 </div>
 
-                <div className=" ml-3 row spacer">
-                  <div className="darkerGray"> Uploading api_certificates.zip </div>
-                  <p className="darkerGray"> 1 minute left </p>
-                </div>
-
-                <div className="ml-2 progress">
-                  <div
-                    className="progress-bar"
-                    role="progressbar"
-                    style={{ "width": props.incrementor }}
-                    aria-valuemin="0"
-                    aria-valuemax="100"> {props.incrementor} %
+                <div className="progressContainer">
+                  <div className="row spacer">
+                    <div className="darkerGray"> Uploading api_certificates.zip </div>
+                    <p className="darkerGray"> 1 minute left </p>
+                  </div>
+                  <div className="progress">
+                    <div
+                      className="progress-bar"
+                      role="progressbar"
+                      style={{ "width": props.incrementor2 }}
+                      aria-valuemin="0"
+                      aria-valuemax="100"> {props.incrementor2} %
                     </div>
+                  </div>
                 </div>
+
               </div>
               : <div className="row mt-3 py-4 rightContent">
                 <i className="ml-2 fas fa-cloud-upload-alt fa-lg darkerGray"></i>
