@@ -189,6 +189,14 @@ class MainBody extends Component {
     })
   }
 
+  billingSave = () => {
+    this.setState({
+      newName: "",
+      newPhone: "",
+      newZip: ""
+    })
+  }
+
   openCredit = () => {
     this.setState({
       editCreditCard: !this.state.editCreditCard
@@ -308,6 +316,7 @@ class MainBody extends Component {
           enableActive4={this.enableActive4}
           editCreditCard={this.state.editCreditCard}
           openCredit={this.openCredit}
+          billingSave={this.billingSave}
         />
         <Access
           password={this.state.password}

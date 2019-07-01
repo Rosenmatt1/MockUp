@@ -31,6 +31,7 @@ const Billing = (props) => {
                     <input 
                       className="pl-2 inputStyle1" 
                       placeholder="Enter Name Here"
+                      value={props.newName}
                       onChange={(e) => props.captureName(e)}
                     />
                   </div>
@@ -38,6 +39,7 @@ const Billing = (props) => {
                     <input
                       className="pl-2 inputStyle1"
                       placeholder="Enter Phone Here"
+                      value={props.newPhone}
                       onChange={(e) => props.capturePhone(e)}
                     />
                   </div>
@@ -45,6 +47,7 @@ const Billing = (props) => {
                     <input
                       className="pl-2 inputStyle1"
                       placeholder="Enter Zip Here"
+                      value={props.newZip}
                       onChange={(e) => props.captureZip(e)}
                     />
                   </div>
@@ -54,7 +57,7 @@ const Billing = (props) => {
               <hr className="hrBoxes" />
 
               {props.newName || props.newPhone || props.newZip
-                ? <button className="btn btn-primary mr-1 floatButtonRight negMar" href="/"> Save Changes </button>
+                ? <button className="btn btn-primary mr-1 floatButtonRight negMar" href="/" onClick={props.billingSave}> Save Changes </button>
                 : <button className="btn btn-primary mr-1 floatButtonRight negMar" href="/" disabled> Save Changes </button>
               }
             </div>
