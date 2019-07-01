@@ -193,6 +193,14 @@ class MainBody extends Component {
     }
   }
 
+  closeToast = () => {
+    this.setState({
+      reportsToast: false,
+      searchToast: false,
+      accountToast: false,
+    })
+  }
+
 
   render() {
     return (
@@ -272,7 +280,7 @@ class MainBody extends Component {
           ?
           <div className="toasts spacer p-3">
             <div> Appsflyer statistics has been updated. </div>
-            <i className="fas fa-times"> </i>
+            <i className="fas fa-times" onClick={this.closeToast}> </i>
           </div>
           :
           <div></div>
@@ -282,7 +290,7 @@ class MainBody extends Component {
           ?
           <div className="toasts spacer p-3">
             <div> Account hasn't been added because of invalid API certificates. </div>
-            <i className="fas fa-times"> </i>
+            <i className="fas fa-times" onClick={this.closeToast}> </i>
           </div>
           :
           <div></div>
@@ -292,7 +300,7 @@ class MainBody extends Component {
           ?
           <div className="toasts spacer p-3">
             <div> Account has been added successfully. </div>
-            <i className="fas fa-times"> </i>
+            <i className="fas fa-times" onClick={this.closeToast}> </i>
           </div>
           :
           <div></div>
