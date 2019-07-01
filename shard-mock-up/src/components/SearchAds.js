@@ -93,10 +93,6 @@ const SearchAds = (props) => {
             
 
 
-
-
-            
-
           </div>
         </div>
 
