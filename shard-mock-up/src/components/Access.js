@@ -34,28 +34,34 @@ const Access = (props) => {
                   />
                 </div>
 
-              {props.passwordError 
-              ?
-                <div className="error">
-                  Password length is not greater than 6 characters.
+                {props.passwordError
+                  ?
+                  <div className="error">
+                    Password length is not greater than 6 characters.
                 </div>
-              : <div></div>
-              }
-                
+                  : <div></div>
+                }
+
                 <div className="textBox my-4">
-                  <input
-                    className="pl-2 inputStyle1"
-                    placeholder="Enter New Password"
-                    type={props.hidden ? "password" : "text"}
-                  />
+                  <div className="row textBox input-icons flexer">
+                    <i className="fas fa-eye icon-input lightIcon" onClick={props.showPassword}></i>
+                    <input
+                      className="pl-2 input-field inputStyle1"
+                      placeholder="Enter New Password"
+                      type={props.hidden ? "password" : "text"}
+                    />
+                  </div>
                 </div>
 
                 <div className="textBox">
-                  <input
-                    className="pl-2 inputStyle1"
-                    placeholder="Enter New Password"
-                    type={props.hidden ? "password" : "text"}
-                  />
+                  <div className="row textBox input-icons flexer">
+                    <i className="fas fa-eye icon-input lightIcon" onClick={props.showPassword}></i>
+                    <input
+                      className="pl-2 input-field inputStyle1"
+                      placeholder="Enter New Password"
+                      type={props.hidden ? "password" : "text"}
+                    />
+                  </div>
                 </div>
 
               </div>
