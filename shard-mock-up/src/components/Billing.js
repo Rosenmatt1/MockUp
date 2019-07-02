@@ -86,7 +86,7 @@ const Billing = (props) => {
                   <button className="btn grayButton mr-2" 
                   onClick={props.openCredit} 
                   href="/">
-                    Edit Card
+                    Cancel
               </button>
                   <button className="btn btn-primary negMar" 
                     onClick={props.openCredit} 
