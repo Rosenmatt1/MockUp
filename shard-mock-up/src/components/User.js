@@ -5,7 +5,7 @@ const User = (props) => {
     < div >
       <div className="row mt-3 py-3 spacer rightContent">
         <div className="row ml-2 userFlex">
-          {!props.active3
+          {!props.active
             ? <i className="fas fa-circle fa-sm active"></i>
             : <i className="fas fa-circle fa-sm lightIcon"></i>
           }
@@ -16,7 +16,7 @@ const User = (props) => {
         </div>
         <div>
           <button className="btn floatButtonRight grayButton" 
-            onClick={() => props.enableActive3(props.id, props.user)} href="/"> {!props.active3 ? "Disable" : "Enable"} </button>
+            onClick={() => props.userActive(props.id)} href="/"> {!props.active ? "Disable" : "Enable"} </button>
         </div>
       </div>
     </div >

@@ -54,8 +54,7 @@ class SearchAds extends Component {
             </div>
 
             <UsersList 
-            enableActive3={this.props.enableActive3}
-            active3={this.props.active3}
+            userActive={this.props.userActive}
             name={this.props.name}
             users={this.props.users}
             />

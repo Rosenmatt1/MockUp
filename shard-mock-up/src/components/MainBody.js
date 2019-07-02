@@ -13,8 +13,6 @@ class MainBody extends Component {
       progress2: false,
       active: false,
       active2: false,
-      active3: false,
-      active4: true,
       open: false,
       password: false,
       enteredPassword: "",
@@ -31,16 +29,18 @@ class MainBody extends Component {
       hidden: true,
       timesClicked: 0,
       namesArray: [
-        {name: "Machelle Greiner", id: 0}, 
-        {name: "Carleen Braden", id: 1},
-        {name: "Shon Poyner", id: 2}, 
-        {name: "Kourtney Calcote", id: 3},
-        {name: "Briana Byfield", id: 4}, 
-        {name: "Lyndon Vera", id: 5}, 
-        {name: "Gwen Keasler", id: 6}, 
-        {name: "Tim Alcott", id: 7},
-        {name: "Almeta Malizia", id: 8}, 
-        {name: "Veronique Borne", id: 9}
+        {name: "Machelle Greiner", active: false, id: 0}, 
+        { name: "Carleen Braden", active: false, id: 1},
+        { name: "Shon Poyner", active: false, id: 2}, 
+        { name: "Kourtney Calcote", active: false, id: 3},
+        { name: "Briana Byfield", active: false, id: 4}, 
+        { name: "Lyndon Vera", active: false, id: 5}, 
+        { name: "Gwen Keasler", active: false, id: 6}, 
+        { name: "Tim Alcott", active: false, id: 7},
+        { name: "Almeta Malizia", active: false, id: 8}, 
+        { name: "Veronique Borne", active: false, id: 9},
+        { name: "John Linch", active: false, id: 10 },
+        { name: "Fay Durgha", active: false, id: 11 }
       ],
       users: [],
     }
@@ -95,19 +95,15 @@ class MainBody extends Component {
     })
   }
 
-  enableActive3 = (id, user) => {
-    console.log(id)
-    console.log(user)
-    console.log(user === this.state.users[id])
-    this.setState({
-      active3: !this.state.active3,
+  userActive = (id) => {
+    let mappedUsers = this.state.users.map(user => {
+      if (id === user.id) {
+        user.active = !user.active
+      }
+      return user
     })
-  }
-
-  enableActive4 = (e) => {
-    e.preventDefault()
     this.setState({
-      active4: !this.state.active4,
+      users: mappedUsers,
     })
   }
 
@@ -324,8 +320,7 @@ class MainBody extends Component {
           enableActive2={this.enableActive2}
           active2={this.state.active2}
           openUser={this.openUser}
-          active3={this.state.active3}
-          enableActive3={this.enableActive3}
+          userActive={this.userActive}
           open={this.state.open}
           progress2={this.state.progress2}
           incrementor2={this.state.incrementor2}
@@ -339,7 +334,6 @@ class MainBody extends Component {
           capturePhone={this.capturePhone}
           captureZip={this.captureZip}
           captureName={this.captureName}
-          active4={this.state.active4}
           enableActive4={this.enableActive4}
           editCreditCard={this.state.editCreditCard}
           openCredit={this.openCredit}

@@ -6,10 +6,11 @@ const UsersList = (props) => {
     props.users.map((user, idx) => {
       return (
         <User 
-        enableActive3={props.enableActive3}
+        userActive={props.userActive}
         active3={props.active3}
         key={idx} 
         user={user.name} 
+        active={user.active}
         id={user.id}
         />
       )
