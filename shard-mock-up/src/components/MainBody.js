@@ -31,6 +31,7 @@ class MainBody extends Component {
       hidden: true,
       timesClicked: 0,
       namesArray: ["Machelle Greiner", "Carleen Braden", "Shon Poyner", "Kourtney Calcote", "Briana Byfield", "Lyndon Vera", "Gwen Keasler", "Almeta Malizia", "Veronique Borne", "Diedre Dufresne", "Wendi Schmidtke", "Karisa Genao", "An Whitworth", "Dorene Naugle", "Blanca Moorhouse", "Deidre Crumbley", "Taisha Branning", "Latia Vento", "Taren Lavalle", "Dreama Longenecker"],
+      user: [],
       name: ""
     }
   }
