@@ -17,7 +17,7 @@ const Reports = (props) => {
               ?
               <div className="row fullWidth userFlex">
 
-                <div className=" ml-2 cloudContainer">
+                <div className="ml-2 cloudContainer">
                   <i className="fas fa-cloud-upload-alt fa-lg blueIcon darkerGray"></i>
                 </div>
 

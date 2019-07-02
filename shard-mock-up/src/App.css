@@ -303,6 +303,7 @@ a {
 
 .progressContainer {
   width: 86%;
+  margin-left: -1.3rem;
 }
 
 .ccMonthWidth {
