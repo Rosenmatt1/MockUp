@@ -31,7 +31,7 @@ class MainBody extends Component {
       hidden: true,
       timesClicked: 0,
       namesArray: ["Machelle Greiner", "Carleen Braden", "Shon Poyner", "Kourtney Calcote", "Briana Byfield", "Lyndon Vera", "Gwen Keasler", "Almeta Malizia", "Veronique Borne", "Diedre Dufresne", "Wendi Schmidtke", "Karisa Genao", "An Whitworth", "Dorene Naugle", "Blanca Moorhouse", "Deidre Crumbley", "Taisha Branning", "Latia Vento", "Taren Lavalle", "Dreama Longenecker"],
-      user: [],
+      users: ["John Doe"],
       name: ""
     }
   }
@@ -148,8 +148,10 @@ class MainBody extends Component {
     let randomName = this.state.namesArray[Math.floor(Math.random() * this.state.namesArray.length)]
     console.log(randomName)
     this.setState({
-      name: randomName
+      name: randomName,
+      users: [...this.state.users, randomName]
     })
+    console.log(this.state.users)
   }
 
   openUser = (e) => {
@@ -318,6 +320,7 @@ class MainBody extends Component {
           incrementor2={this.state.incrementor2}
           namesArray={this.state.namesArray}
           name={this.state.name}
+          users={this.state.users}
         />
         <Billing
           newPhone={this.state.newPhone}

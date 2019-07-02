@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import UsersList from './UsersList'
+import UsersList from './UsersList'
 
 class SearchAds extends Component {
   constructor(props) {
@@ -53,7 +53,13 @@ class SearchAds extends Component {
               </div>
             </div>
 
-            {/* <UsersList /> */}
+            <UsersList 
+            enableActive3={this.props.enableActive3}
+            active3={this.props.active3}
+            name={this.props.name}
+            users={this.props.users}
+            />
+
 
             {/* {this.props.open
               ?
