@@ -12,7 +12,7 @@ const Reports = (props) => {
 
         <div className="col-8 bodyRight">
           <div className="rightContent">
-            
+
             {props.progress
               ?
               <div className="row fullWidth userFlex">
@@ -30,13 +30,14 @@ const Reports = (props) => {
                     <div
                       className="progress-bar"
                       role="progressbar"
-                      style={{ "width": props.incrementor }}
+                      style={{ "width": `${props.incrementor}%` }}
                       aria-valuemin="0"
-                      aria-valuemax="100"> {props.incrementor} %
+                      aria-valuemax="100">
+                      {props.incrementor} %
                     </div>
                   </div>
                 </div>
-                
+
               </div>
               :
               <div className="row ml-2 mt-4">

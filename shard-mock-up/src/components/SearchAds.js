@@ -82,9 +82,10 @@ const SearchAds = (props) => {
                     <div
                       className="progress-bar"
                       role="progressbar"
-                      style={{ "width": props.incrementor2 }}
+                      style={{ "width": `${props.incrementor2}%` }}
                       aria-valuemin="0"
-                      aria-valuemax="100"> {props.incrementor2} %
+                      aria-valuemax="100"> 
+                      {props.incrementor2} % 
                     </div>
                   </div>
                 </div>

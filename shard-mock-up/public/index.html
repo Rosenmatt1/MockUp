@@ -12,10 +12,12 @@
     -->
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <script src="https://kit.fontawesome.com/a6aca33685.js"></script>
+
+  <link rel="dns-prefetch" href="https://kit.fontawesome.com/">
+  <link rel="dns-prefetch" href="https://fontawesome.com/">
   <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -25,25 +27,6 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
-    
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-           https://firebase.google.com/docs/web/setup#config-web-app -->
-    
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyDa-zGTFyF8y96FoUc0H6P17hHc_d9XSKk",
-        authDomain: "long-form-pro.firebaseapp.com",
-        databaseURL: "https://long-form-pro.firebaseio.com",
-        projectId: "long-form-pro",
-        storageBucket: "",
-        messagingSenderId: "42355741418",
-        appId: "1:42355741418:web:0d9e392633a66fcd"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-    </script>
 
   <title>Long Form Pro</title>
 </head>
@@ -61,6 +44,26 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#config-web-app -->
+    
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCDlj7vmZ2C0ED63Uu2jtd3PtixnH_xDMI",
+        authDomain: "long-form-settings.firebaseapp.com",
+        databaseURL: "https://long-form-settings.firebaseio.com",
+        projectId: "long-form-settings",
+        storageBucket: "",
+        messagingSenderId: "190790743714",
+        appId: "1:190790743714:web:ee3f4c072e3ded01"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
 
 </body>
 

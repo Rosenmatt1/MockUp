@@ -168,7 +168,6 @@ a {
 
 .hrUnits {
   border: 1px solid #DDE5EF;
-  width: calc((100vw - 3.5rem) / 75%);
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
@@ -176,7 +175,7 @@ a {
 .hrBoxes {
  border: 1px solid #F2F3F7;
  width: 100%;
- width: calc(100% + 2rem);
+ width: calc(100vw + 2rem);
  margin-left: -1rem;
 }
 
