@@ -29,7 +29,9 @@ class MainBody extends Component {
       incrementor: 0,
       incrementor2: 0,
       hidden: true,
-      timesClicked: 0
+      timesClicked: 0,
+      namesArray: ["Machelle Greiner", "Carleen Braden", "Shon Poyner", "Kourtney Calcote", "Briana Byfield", "Lyndon Vera", "Gwen Keasler", "Almeta Malizia", "Veronique Borne", "Diedre Dufresne", "Wendi Schmidtke", "Karisa Genao", "An Whitworth", "Dorene Naugle", "Blanca Moorhouse", "Deidre Crumbley", "Taisha Branning", "Latia Vento", "Taren Lavalle", "Dreama Longenecker"],
+      name: ""
     }
   }
 
@@ -121,6 +123,7 @@ class MainBody extends Component {
               accountToast: false
             })
           }, 2500)
+          this.generateName()
         }
       } else {
         if (this.state.incrementor2 >= 100) {
@@ -138,6 +141,14 @@ class MainBody extends Component {
         }
       }
     }, 100)
+  }
+
+  generateName = () => {
+    let randomName = this.state.namesArray[Math.floor(Math.random() * this.state.namesArray.length)]
+    console.log(randomName)
+    this.setState({
+      name: randomName
+    })
   }
 
   openUser = (e) => {
@@ -304,6 +315,8 @@ class MainBody extends Component {
           open={this.state.open}
           progress2={this.state.progress2}
           incrementor2={this.state.incrementor2}
+          namesArray={this.state.namesArray}
+          name={this.state.name}
         />
         <Billing
           newPhone={this.state.newPhone}

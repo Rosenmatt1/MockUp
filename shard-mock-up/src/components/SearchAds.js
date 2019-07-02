@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { Component } from 'react';
 
-const SearchAds = (props) => {
+class SearchAds extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+    }
+  }
+
+  render() {
   return (
     <div>
       <div className="row">
@@ -15,7 +22,7 @@ const SearchAds = (props) => {
 
             <div className="row py-3 spacer rightContent">
               <div className="row ml-2 userFlex">
-                {props.active
+                {this.props.active
                   ? <i className="fas fa-circle fa-sm active"></i>
                   : <i className="fas fa-circle fa-sm lightIcon"></i>
                 }
@@ -25,13 +32,13 @@ const SearchAds = (props) => {
                 </div>
               </div>
               <div>
-                <button className="btn floatButtonRight grayButton" onClick={props.enableActive} href="/"> {!props.active ? "Enable" : "Disable"} </button>
+                <button className="btn floatButtonRight grayButton" onClick={this.props.enableActive} href="/"> {!this.props.active ? "Enable" : "Disable"} </button>
               </div>
             </div>
 
             <div className="row mt-3 py-3 spacer rightContent">
               <div className="row ml-2 userFlex">
-                {props.active2
+                {this.props.active2
                   ? <i className="fas fa-circle fa-sm active"></i>
                   : <i className="fas fa-circle fa-sm lightIcon"></i>
                 }
@@ -41,31 +48,31 @@ const SearchAds = (props) => {
                 </div>
               </div>
               <div>
-                <button className="btn floatButtonRight grayButton" onClick={props.enableActive2} href="/"> {!props.active2 ? "Enable" : "Disable"} </button>
+                <button className="btn floatButtonRight grayButton" onClick={this.props.enableActive2} href="/"> {!this.props.active2 ? "Enable" : "Disable"} </button>
               </div>
             </div>
 
-            {props.open
+            {this.props.open
               ?
               <div className="row mt-3 py-3 spacer rightContent">
                 <div className="row ml-2 userFlex">
-                  {!props.active3
+                  {!this.props.active3
                     ? <i className="fas fa-circle fa-sm active"></i>
                     : <i className="fas fa-circle fa-sm lightIcon"></i>
                   }
                   <div className="ml-3">
-                    <div className="textBox"> Eugene McCarthy </div>
+                    <div className="textBox"> {this.props.name} </div>
                     <div className="lightText"> Added June 10th 2017 </div>
                   </div>
                 </div>
                 <div>
-                  <button className="btn floatButtonRight grayButton" onClick={props.enableActive3} href="/"> {!props.active3 ? "Disable" : "Enable"} </button>
+                  <button className="btn floatButtonRight grayButton" onClick={this.props.enableActive3} href="/"> {!this.props.active3 ? "Disable" : "Enable"} </button>
                 </div>
               </div>
               : <div></div>
             }
 
-            {props.progress2
+            {this.props.progress2
               ?
               <div className="row fullWidth userFlex rightContent mt-3">
 
@@ -82,10 +89,10 @@ const SearchAds = (props) => {
                     <div
                       className="progress-bar"
                       role="progressbar"
-                      style={{ "width": `${props.incrementor2}%` }}
+                      style={{ "width": `${this.props.incrementor2}%` }}
                       aria-valuemin="0"
                       aria-valuemax="100"> 
-                      {props.incrementor2} % 
+                      {this.props.incrementor2} % 
                     </div>
                   </div>
                 </div>
@@ -93,7 +100,7 @@ const SearchAds = (props) => {
               </div>
               : <div className="row mt-3 py-4 rightContent">
                 <i className="ml-2 fas fa-cloud-upload-alt fa-lg darkerGray"></i>
-                <div className="text ml-3"> Drop archive with API certificate here or choose <a onClick={props.openUser} href="/">choose file</a> to add new account </div>
+                <div className="text ml-3"> Drop archive with API certificate here or choose <a onClick={this.props.openUser} href="/">choose file</a> to add new account </div>
               </div>
             }
 
@@ -105,5 +112,8 @@ const SearchAds = (props) => {
     </div>
   )
 }
+}
+
+
 
 export default SearchAds
