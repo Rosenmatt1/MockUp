@@ -30,7 +30,18 @@ class MainBody extends Component {
       incrementor2: 0,
       hidden: true,
       timesClicked: 0,
-      namesArray: ["Machelle Greiner", "Carleen Braden", "Shon Poyner", "Kourtney Calcote", "Briana Byfield", "Lyndon Vera", "Gwen Keasler", "Almeta Malizia", "Veronique Borne", "Diedre Dufresne", "Wendi Schmidtke", "Karisa Genao", "An Whitworth", "Dorene Naugle", "Blanca Moorhouse", "Deidre Crumbley", "Taisha Branning", "Latia Vento", "Taren Lavalle", "Dreama Longenecker"],
+      namesArray: [
+        {name: "Machelle Greiner", id: 0}, 
+        {name: "Carleen Braden", id: 1},
+        {name: "Shon Poyner", id: 2}, 
+        {name: "Kourtney Calcote", id: 3},
+        {name: "Briana Byfield", id: 4}, 
+        {name: "Lyndon Vera", id: 5}, 
+        {name: "Gwen Keasler", id: 6}, 
+        {name: "Tim Alcott", id: 7},
+        {name: "Almeta Malizia", id: 8}, 
+        {name: "Veronique Borne", id: 9}
+      ],
       users: [],
     }
   }
@@ -147,11 +158,11 @@ class MainBody extends Component {
 
   generateName = () => {
     let randomName = this.state.namesArray[Math.floor(Math.random() * this.state.namesArray.length)]
-    console.log(randomName)
+    console.log("randomName", randomName)
     this.setState({
       users: [...this.state.users, randomName]
     })
-    console.log(this.state.users)
+    console.log("users", this.state.users)
   }
 
   openUser = (e) => {

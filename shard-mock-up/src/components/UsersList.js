@@ -9,8 +9,8 @@ const UsersList = (props) => {
         enableActive3={props.enableActive3}
         active3={props.active3}
         key={idx} 
-        user={user} 
-        id={idx}
+        user={user.name} 
+        id={user.id}
         />
       )
     })
