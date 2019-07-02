@@ -15,7 +15,8 @@ const User = (props) => {
           </div>
         </div>
         <div>
-          <button className="btn floatButtonRight grayButton" onClick={props.enableActive3} href="/"> {!props.active3 ? "Disable" : "Enable"} </button>
+          <button className="btn floatButtonRight grayButton" 
+            onClick={() => props.enableActive3(props.id, props.user)} href="/"> {!props.active3 ? "Disable" : "Enable"} </button>
         </div>
       </div>
     </div >

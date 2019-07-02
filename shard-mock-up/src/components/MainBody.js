@@ -84,8 +84,10 @@ class MainBody extends Component {
     })
   }
 
-  enableActive3 = (e) => {
-    e.preventDefault()
+  enableActive3 = (id, user) => {
+    console.log(id)
+    console.log(user)
+    console.log(user === this.state.users[id])
     this.setState({
       active3: !this.state.active3,
     })
