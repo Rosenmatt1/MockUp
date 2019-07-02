@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import UsersList from './UsersList'
 
 class SearchAds extends Component {
   constructor(props) {
@@ -52,7 +53,9 @@ class SearchAds extends Component {
               </div>
             </div>
 
-            {this.props.open
+            {/* <UsersList /> */}
+
+            {/* {this.props.open
               ?
               <div className="row mt-3 py-3 spacer rightContent">
                 <div className="row ml-2 userFlex">
@@ -70,7 +73,7 @@ class SearchAds extends Component {
                 </div>
               </div>
               : <div></div>
-            }
+            } */}
 
             {this.props.progress2
               ?
