@@ -13,7 +13,8 @@ class MainBody extends Component {
       progress2: false,
       active: false,
       active2: false,
-      open: false,
+      email: "",
+      emailActive: false,
       password: false,
       enteredPassword: "",
       passwordError: false,
@@ -46,9 +47,34 @@ class MainBody extends Component {
     }
   }
 
+  captureEmail = (e) => {
+    this.setState({
+      email: e.target.value
+    }, () => {
+      if (this.state.email.length > 0) {
+        this.setState({
+          emailActive: true
+        })
+      } else {
+        this.setState({
+          emailActive: false
+        })
+      }
+    })
+    console.log(this.state.email)
+  }
+
   checkedSetting = () => {
     this.setState({
-      checked: !this.state.checked,
+      checked: !this.state.checked
+    })
+  }
+
+  saveSystem = () => {
+    this.setState({
+      email: "",
+      checked: false,
+      emailActive: false
     })
   }
 
@@ -285,10 +311,26 @@ class MainBody extends Component {
                 </div>
                 <div className="flexColumn right">
                   <div className="textBox">
-                    <input className="pl-2 inputStyle1" placeholder="gregory.murynmukha@gmail.com" />
+                    <input
+                      className="pl-2 inputStyle1"
+                      onChange={(e) => this.captureEmail(e)}
+                      value={this.state.email}
+                      placeholder="gregory.murynmukha@gmail.com" />
                   </div>
                   <div className="textBox my-4">
-                    <input className="mr-1 inputStyle" onClick={this.checkedSetting} type="checkbox" />  Take into account Apple commision charges (30%)
+
+                    {this.state.checked ? <input
+                      className="mr-1 inputStyle"
+                      onClick={this.checkedSetting}
+                      type="checkbox"
+                      checked
+                    /> : <input
+                        className="mr-1 inputStyle"
+                        onClick={this.checkedSetting}
+                        type="checkbox"
+                      />}
+
+                      Take into account Apple commision charges (30%)
                   </div>
                   <div className="textBox">
                     <input className="pl-2 mr-2 inputStyle" placeholder="$0.00" /> per each install
@@ -298,8 +340,8 @@ class MainBody extends Component {
 
               <hr className="hrBoxes" />
 
-              {this.state.checked
-                ? <button className="btn btn-primary floatButtonRight" href="/"> Save Changes </button>
+              {this.state.checked || this.state.emailActive
+                ? <button className="btn btn-primary floatButtonRight" href="/" onClick={() => this.saveSystem()} > Save Changes </button>
                 : <button className="btn btn-primary floatButtonRight" href="/" disabled> Save Changes </button>
               }
 
