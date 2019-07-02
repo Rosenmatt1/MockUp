@@ -98,10 +98,7 @@ const Billing = (props) => {
               :
               <div className="row mt-3 py-3 spacer rightContent">
                 <div className="row ml-2">
-                  {props.active4
-                    ? <i className="fas fa-circle fa-sm active"></i>
-                    : <i className="fas fa-circle fa-sm lightIcon"></i>
-                  }
+                   <i className="fas fa-circle fa-sm active"></i>
                   <div className="ml-3">
                     <div className="textBox"> Mastercard Ending in 4482 </div>
                     <div className="lightText mt-1"> 07/20 </div>
