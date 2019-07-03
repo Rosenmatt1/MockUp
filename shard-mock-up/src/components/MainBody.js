@@ -256,16 +256,21 @@ class MainBody extends Component {
       enteredPassword: e.target.value,
       password: true,
     }, () => {
-      // if (this.state.enteredPassword.length <= 0) {
-      //   this.setState({
-      //     password: false,
-      //   })
-      // }
+        if (this.state.enteredPassword.length > 0 || this.state.newPassword.length > 0 || this.state.confirmPassword.length > 0) {
+          this.setState({
+            password: true,
+          })
+        } else {
+          this.setState({
+            password: false,
+          })
+        }
     })
   }
 
   passwordCheck = (e) => {
     e.preventDefault()
+
     if (this.state.enteredPassword.length < 6) {
       this.setState({
         passwordError: true
@@ -281,188 +286,203 @@ class MainBody extends Component {
     }
   }
 
-closeToast = () => {
-  this.setState({
-    reportsToast: false,
-    searchToast: false,
-    accountToast: false,
-  })
-}
+  closeToast = () => {
+    this.setState({
+      reportsToast: false,
+      searchToast: false,
+      accountToast: false,
+    })
+  }
 
-showPassword = () => {
-  this.setState({
-    hidden: !this.state.hidden
-  })
-}
+  showPassword = () => {
+    this.setState({
+      hidden: !this.state.hidden
+    })
+  }
 
-captureNewPassword = (e) => {
-  this.setState({
-    newPassword: e.target.value,
-    password: true,
-  }, () => {
+  captureNewPassword = (e) => {
+    this.setState({
+      newPassword: e.target.value,
+      password: true,
+    }, () => {
+        if (this.state.enteredPassword.length > 0 || this.state.newPassword.length > 0 || this.state.confirmPassword.length > 0) {
+          this.setState({
+            password: true,
+          })
+        } else {
+          this.setState({
+            password: false,
+          })
+        }
+    })
+  }
 
-  })
-}
+  captureConfirmPassword = (e) => {
+    this.setState({
+      confirmPassword: e.target.value,
+      password: true,
+    }, () => {
+        if (this.state.enteredPassword.length > 0 || this.state.newPassword.length > 0 || this.state.confirmPassword.length > 0) {
+          this.setState({
+            password: true,
+          })
+        } else {
+          this.setState({
+            password: false,
+          })
+        }
+    })
+  }
 
-captureConfirmPassword = (e) => {
-  this.setState({
-    confirmPassword: e.target.value,
-    password: true,
-  }, () => {
-    console.log(this.state.confirmPassword)
+  render() {
+    return (
+      <div className="container-fluid mainBody" >
+        <div className="row">
 
-  })
-}
-
-render() {
-  return (
-    <div className="container-fluid mainBody" >
-      <div className="row">
-
-        <div className="col-4 bodyLeft">
-          <p className="mt-4"> System </p>
-          <p className="text">Configure external fees and email that will be used as default address for notifications</p>
-          <div> <a href="/" rel="noopener noreferrer">How does Apple commission influence my statistic?</a> </div>
-          <div> <a href="/" rel="noopener noreferrer">How do attribution tracking expenses mean?</a> </div>
-        </div>
-
-        <div className="col-8 bodyRight">
-          <div className="rightContent">
-            <div className="title my-2 ml-2"><p> General Settings </p></div>
-            <hr className="hrBoxes" />
-
-            <div className="row">
-              <div className="flexColumn pl-2 left">
-                <div className="textBox"> Email </div>
-                <div className="textBox my-4"> Commission Charges </div>
-                <div className="textBox"> Tracking Expense </div>
-              </div>
-              <div className="flexColumn right">
-                <div className="textBox">
-                  <input
-                    className="pl-2 inputStyle1"
-                    onChange={(e) => this.captureEmail(e)}
-                    value={this.state.email}
-                    placeholder="gregory.murynmukha@gmail.com" />
-                </div>
-                <div className="textBox my-4">
-
-                  {this.state.checked
-                    ?
-                    <input
-                      className="mr-1 inputStyle"
-                      onClick={this.checkedSetting}
-                      value={this.state.checked}
-                      type="checkbox"
-                      checked
-                    />
-                    :
-                    <input
-                      className="mr-1 inputStyle"
-                      onClick={this.checkedSetting}
-                      value={this.state.checked}
-                      type="checkbox"
-                    />
-                  }
-
-                  Take into account Apple commision charges (30%)
-                  </div>
-                <div className="textBox">
-                  <input className="pl-2 mr-2 inputStyle" placeholder="$0.00" /> per each install
-                  </div>
-              </div>
-            </div>
-
-            <hr className="hrBoxes" />
-
-            {this.state.checked || this.state.emailActive
-              ? <button className="btn btn-primary floatButtonRight" href="/" onClick={() => this.saveSystem()} > Save Changes </button>
-              : <button className="btn btn-primary floatButtonRight" href="/" disabled> Save Changes </button>
-            }
-
+          <div className="col-4 bodyLeft">
+            <p className="mt-4"> System </p>
+            <p className="text">Configure external fees and email that will be used as default address for notifications</p>
+            <div> <a href="/" rel="noopener noreferrer">How does Apple commission influence my statistic?</a> </div>
+            <div> <a href="/" rel="noopener noreferrer">How do attribution tracking expenses mean?</a> </div>
           </div>
+
+          <div className="col-8 bodyRight">
+            <div className="rightContent">
+              <div className="title my-2 ml-2"><p> General Settings </p></div>
+              <hr className="hrBoxes" />
+
+              <div className="row">
+                <div className="flexColumn pl-2 left">
+                  <div className="textBox"> Email </div>
+                  <div className="textBox my-4"> Commission Charges </div>
+                  <div className="textBox"> Tracking Expense </div>
+                </div>
+                <div className="flexColumn right">
+                  <div className="textBox">
+                    <input
+                      className="pl-2 inputStyle1"
+                      onChange={(e) => this.captureEmail(e)}
+                      value={this.state.email}
+                      placeholder="gregory.murynmukha@gmail.com" />
+                  </div>
+                  <div className="textBox my-4">
+
+                    {this.state.checked
+                      ?
+                      <input
+                        className="mr-1 inputStyle"
+                        onClick={this.checkedSetting}
+                        value={this.state.checked}
+                        type="checkbox"
+                        checked
+                      />
+                      :
+                      <input
+                        className="mr-1 inputStyle"
+                        onClick={this.checkedSetting}
+                        value={this.state.checked}
+                        type="checkbox"
+                      />
+                    }
+
+                    Take into account Apple commision charges (30%)
+                  </div>
+                  <div className="textBox">
+                    <input className="pl-2 mr-2 inputStyle" placeholder="$0.00" /> per each install
+                  </div>
+                </div>
+              </div>
+
+              <hr className="hrBoxes" />
+
+              {this.state.checked || this.state.emailActive
+                ? <button className="btn btn-primary floatButtonRight" href="/" onClick={() => this.saveSystem()} > Save Changes </button>
+                : <button className="btn btn-primary floatButtonRight" href="/" disabled> Save Changes </button>
+              }
+
+            </div>
+          </div>
+
         </div>
+        <hr className="hrUnits" />
 
-      </div>
-      <hr className="hrUnits" />
+        <Reports
+          progressActivation={this.progressActivation}
+          progress={this.state.progress}
+          incrementor={this.state.incrementor}
+        />
+        <SearchAds
+          enableActive={this.enableActive}
+          active={this.state.active}
+          enableActive2={this.enableActive2}
+          active2={this.state.active2}
+          openUser={this.openUser}
+          userActive={this.userActive}
+          open={this.state.open}
+          progress2={this.state.progress2}
+          incrementor2={this.state.incrementor2}
+          namesArray={this.state.namesArray}
+          users={this.state.users}
+        />
+        <Billing
+          newPhone={this.state.newPhone}
+          newZip={this.state.newZip}
+          newName={this.state.newName}
+          capturePhone={this.capturePhone}
+          captureZip={this.captureZip}
+          captureName={this.captureName}
+          enableActive4={this.enableActive4}
+          editCreditCard={this.state.editCreditCard}
+          openCredit={this.openCredit}
+          billingSave={this.billingSave}
+        />
+        <Access
+          password={this.state.password}
+          passwordCurrent={this.passwordCurrent}
+          passwordCheck={this.passwordCheck}
+          passwordError={this.state.passwordError}
+          passwordNotMatch={this.passwordNotMatch}
+          passwordChanged={this.passwordChanged}
+          hidden={this.state.hidden}
+          showPassword={this.showPassword}
+          enteredPassword={this.state.enteredPassword}
+          captureNewPassword={this.captureNewPassword}
+          captureConfirmPassword={this.captureConfirmPassword}
+        />
 
-      <Reports
-        progressActivation={this.progressActivation}
-        progress={this.state.progress}
-        incrementor={this.state.incrementor}
-      />
-      <SearchAds
-        enableActive={this.enableActive}
-        active={this.state.active}
-        enableActive2={this.enableActive2}
-        active2={this.state.active2}
-        openUser={this.openUser}
-        userActive={this.userActive}
-        open={this.state.open}
-        progress2={this.state.progress2}
-        incrementor2={this.state.incrementor2}
-        namesArray={this.state.namesArray}
-        users={this.state.users}
-      />
-      <Billing
-        newPhone={this.state.newPhone}
-        newZip={this.state.newZip}
-        newName={this.state.newName}
-        capturePhone={this.capturePhone}
-        captureZip={this.captureZip}
-        captureName={this.captureName}
-        enableActive4={this.enableActive4}
-        editCreditCard={this.state.editCreditCard}
-        openCredit={this.openCredit}
-        billingSave={this.billingSave}
-      />
-      <Access
-        password={this.state.password}
-        passwordCurrent={this.passwordCurrent}
-        passwordCheck={this.passwordCheck}
-        passwordError={this.state.passwordError}
-        passwordNotMatch={this.passwordNotMatch}
-        passwordChanged={this.passwordChanged}
-        hidden={this.state.hidden}
-        showPassword={this.showPassword}
-        enteredPassword={this.state.enteredPassword}
-        captureNewPassword={this.captureNewPassword}
-        captureConfirmPassword={this.captureConfirmPassword}
-      />
+        {this.state.reportsToast
+          ?
+          <div className="toasts spacer p-3">
+            <div> Appsflyer statistics has been updated. </div>
+            <i className="fas fa-times" onClick={this.closeToast}> </i>
+          </div>
+          :
+          <div></div>
+        }
 
-      {this.state.reportsToast
-        ?
-        <div className="toasts spacer p-3">
-          <div> Appsflyer statistics has been updated. </div>
-          <i className="fas fa-times" onClick={this.closeToast}> </i>
-        </div>
-        :
-        <div></div>
-      }
+        {this.state.searchToast
+          ?
+          <div className="toasts spacer p-3">
+            <div> Account hasn't been added because of invalid API certificates. </div>
+            <i className="fas fa-times" onClick={this.closeToast}> </i>
+          </div>
+          :
+          <div></div>
+        }
 
-      {this.state.searchToast
-        ?
-        <div className="toasts spacer p-3">
-          <div> Account hasn't been added because of invalid API certificates. </div>
-          <i className="fas fa-times" onClick={this.closeToast}> </i>
-        </div>
-        :
-        <div></div>
-      }
+        {this.state.accountToast
+          ?
+          <div className="toasts spacer p-3">
+            <div> Account has been added successfully. </div>
+            <i className="fas fa-times" onClick={this.closeToast}> </i>
+          </div>
+          :
+          <div></div>
+        }
 
-      {this.state.accountToast
-        ?
-        <div className="toasts spacer p-3">
-          <div> Account has been added successfully. </div>
-          <i className="fas fa-times" onClick={this.closeToast}> </i>
-        </div>
-        :
-        <div></div>
-      }
-
-    </div >
-  )
-}
+      </div >
+    )
+  }
 }
 
 export default MainBody
