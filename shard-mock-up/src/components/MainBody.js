@@ -13,9 +13,6 @@ class MainBody extends Component {
       progress2: false,
       active: false,
       active2: false,
-      email: "",
-      emailActive: false,
-      editCreditCard: false,
       reportsToast: false,
       searchToast: false,
       accountToast: false,
@@ -38,12 +35,17 @@ class MainBody extends Component {
         { name: "Fay Durgha", active: false, id: 11 }
       ],
       users: [],
-      password: false,
-      enteredPassword: "",
-      passwordError: false,
       newPhone: "",
       newZip: "",
       newName: "",
+      email: "",
+      emailActive: false,
+      editCreditCard: false,
+      password: false,
+      enteredPassword: "",
+      passwordError: false,
+      newPassword: "",
+      confirmPassword: "",
     }
   }
 
@@ -280,6 +282,32 @@ class MainBody extends Component {
   showPassword = () => {
     this.setState({
       hidden: !this.state.hidden
+    })
+  }
+
+  captureNewPassword = (e) => {
+    this.setState({
+      newPassword: e.target.value,
+      password: true,
+    }, () => {
+      if (this.state.enteredPassword.length <= 0) {
+        this.setState({
+          password: false,
+        })
+      }
+    })
+  }
+
+  captureConfirmPassword = (e) => {
+    this.setState({
+      confirmPassword: e.target.value,
+      password: true,
+    }, () => {
+      if (this.state.enteredPassword.length <= 0) {
+        this.setState({
+          password: false,
+        })
+      }
     })
   }
 
