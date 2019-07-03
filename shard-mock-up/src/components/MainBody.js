@@ -15,12 +15,6 @@ class MainBody extends Component {
       active2: false,
       email: "",
       emailActive: false,
-      password: false,
-      enteredPassword: "",
-      passwordError: false,
-      newPhone: "",
-      newZip: "",
-      newName: "",
       editCreditCard: false,
       reportsToast: false,
       searchToast: false,
@@ -44,6 +38,12 @@ class MainBody extends Component {
         { name: "Fay Durgha", active: false, id: 11 }
       ],
       users: [],
+      password: false,
+      enteredPassword: "",
+      passwordError: false,
+      newPhone: "",
+      newZip: "",
+      newName: "",
     }
   }
 
@@ -61,7 +61,6 @@ class MainBody extends Component {
         })
       }
     })
-    console.log(this.state.email)
   }
 
   checkedSetting = () => {
@@ -180,11 +179,9 @@ class MainBody extends Component {
 
   generateName = () => {
     let randomName = this.state.namesArray[Math.floor(Math.random() * this.state.namesArray.length)]
-    console.log("randomName", randomName)
     this.setState({
       users: [...this.state.users, randomName]
     })
-    console.log("users", this.state.users)
   }
 
   openUser = (e) => {
@@ -319,18 +316,25 @@ class MainBody extends Component {
                   </div>
                   <div className="textBox my-4">
 
-                    {this.state.checked ? <input
-                      className="mr-1 inputStyle"
-                      onClick={this.checkedSetting}
-                      type="checkbox"
-                      checked
-                    /> : <input
+                    {this.state.checked
+                      ?
+                      <input
                         className="mr-1 inputStyle"
                         onClick={this.checkedSetting}
+                        value={this.state.checked}
                         type="checkbox"
-                      />}
+                        checked
+                      />
+                      :  
+                      <input
+                        className="mr-1 inputStyle"
+                        onClick={this.checkedSetting}
+                        value={this.state.checked}
+                        type="checkbox"
+                      />
+                    }
 
-                      Take into account Apple commision charges (30%)
+                    Take into account Apple commision charges (30%)
                   </div>
                   <div className="textBox">
                     <input className="pl-2 mr-2 inputStyle" placeholder="$0.00" /> per each install
