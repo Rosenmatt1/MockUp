@@ -256,15 +256,15 @@ class MainBody extends Component {
       enteredPassword: e.target.value,
       password: true,
     }, () => {
-        if (this.state.enteredPassword.length > 0 || this.state.newPassword.length > 0 || this.state.confirmPassword.length > 0) {
-          this.setState({
-            password: true,
-          })
-        } else {
-          this.setState({
-            password: false,
-          })
-        }
+      if (this.state.enteredPassword.length > 0 || this.state.newPassword.length > 0 || this.state.confirmPassword.length > 0) {
+        this.setState({
+          password: true,
+        })
+      } else {
+        this.setState({
+          password: false,
+        })
+      }
     })
   }
 
@@ -275,15 +275,40 @@ class MainBody extends Component {
       this.setState({
         passwordError: true
       })
-    } else if (this.state.newPassword !== this.state.confirmPassword) {
+    }
+
+    if (this.state.newPassword !== this.state.confirmPassword) {
+      console.log("Passwords don't match!")
       this.setState({
         passwordNotMatch: true
       })
-    } else {
+      console.log(this.state.passwordNotMatch)
+    }
+
+
+    if (this.state.newPassword !== this.state.confirmPassword && this.state.enteredPassword.length >= 6) {
       this.setState({
         passwordChanged: true
       })
     }
+
+
+    // if (this.state.newPassword !== this.state.confirmPassword)
+    // {
+    //   this.setState({
+    //     passwordNotMatch: true
+    //   })
+    // } 
+    // else if (this.state.enteredPassword.length < 6) {
+    //   this.setState({
+    //     passwordError: true
+    //   })
+    // } 
+    // else {
+    //   this.setState({
+    //     passwordChanged: true
+    //   })
+    // }
   }
 
   closeToast = () => {
@@ -305,15 +330,15 @@ class MainBody extends Component {
       newPassword: e.target.value,
       password: true,
     }, () => {
-        if (this.state.enteredPassword.length > 0 || this.state.newPassword.length > 0 || this.state.confirmPassword.length > 0) {
-          this.setState({
-            password: true,
-          })
-        } else {
-          this.setState({
-            password: false,
-          })
-        }
+      if (this.state.enteredPassword.length > 0 || this.state.newPassword.length > 0 || this.state.confirmPassword.length > 0) {
+        this.setState({
+          password: true,
+        })
+      } else {
+        this.setState({
+          password: false,
+        })
+      }
     })
   }
 
@@ -322,15 +347,15 @@ class MainBody extends Component {
       confirmPassword: e.target.value,
       password: true,
     }, () => {
-        if (this.state.enteredPassword.length > 0 || this.state.newPassword.length > 0 || this.state.confirmPassword.length > 0) {
-          this.setState({
-            password: true,
-          })
-        } else {
-          this.setState({
-            password: false,
-          })
-        }
+      if (this.state.enteredPassword.length > 0 || this.state.newPassword.length > 0 || this.state.confirmPassword.length > 0) {
+        this.setState({
+          password: true,
+        })
+      } else {
+        this.setState({
+          password: false,
+        })
+      }
     })
   }
 

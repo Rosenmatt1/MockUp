@@ -38,8 +38,8 @@ const Access = (props) => {
                 {props.passwordError
                   ?
                   <div className="error mt-1">
-                    Password length is not greater than 6 characters.
-                </div>
+                    Incorrect Password.
+                  </div>
                   : <div></div>
                 }
 
@@ -68,6 +68,22 @@ const Access = (props) => {
                     />
                   </div>
                 </div>
+
+                {props.passwordNotMatch
+                  ?
+                  <div className="error mt-1">
+                    New passwords did not match.
+                  </div>
+                  : <div></div>
+                }
+
+                {props.passwordChanged
+                  ?
+                  <div className="error mt-1">
+                    Incorrect Password.
+                  </div>
+                  : <div></div>
+                }
 
               </div>
             </div>
