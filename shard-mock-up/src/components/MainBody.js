@@ -463,6 +463,9 @@ class MainBody extends Component {
           showPassword={this.showPassword}
           captureNewPassword={this.captureNewPassword}
           captureConfirmPassword={this.captureConfirmPassword}
+          enteredPassword={this.state.enteredPassword}
+          newPassword={this.state.newPassword}
+          confirmPassword={this.state.confirmPassword}
         />
 
         {this.state.reportsToast

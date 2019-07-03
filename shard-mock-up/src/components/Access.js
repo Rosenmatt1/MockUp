@@ -48,8 +48,9 @@ const Access = (props) => {
                     <i className="fas fa-eye icon-input lightIcon ml-3" onClick={props.showPassword}></i>
                     <input
                       className="pl-2 input-field inputStyle1"
-                      placeholder="Enter New Password"
                       onChange={(e) => props.captureNewPassword(e)}
+                      placeholder="Enter New Password"
+                      value={props.newPassword}
                       type={props.hidden ? "password" : "text"}
                       required
                     />
@@ -61,8 +62,9 @@ const Access = (props) => {
                     <i className="fas fa-eye icon-input lightIcon ml-3" onClick={props.showPassword}></i>
                     <input
                       className="pl-2 input-field inputStyle1"
-                      placeholder="Enter New Password"
                       onChange={(e) => props.captureConfirmPassword(e)}
+                      placeholder="Enter New Password"
+                      value={props.confirmPassword}
                       type={props.hidden ? "password" : "text"}
                       required
                     />
