@@ -291,7 +291,7 @@ class MainBody extends Component {
       console.log(this.state.passwordNotMatch)
     }
 
-    if (this.state.newPassword === this.state.confirmPassword && this.state.enteredPassword.length >= 6) {
+    if (this.state.newPassword.length !== 0 && this.state.newPassword === this.state.confirmPassword && this.state.enteredPassword.length >= 6) {
       this.setState({
         passwordChanged: true,
         enteredPassword: "",
