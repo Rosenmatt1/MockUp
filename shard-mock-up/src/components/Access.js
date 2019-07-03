@@ -87,15 +87,19 @@ const Access = (props) => {
                     ?
                     <div className="error mt-1">
                       New passwords did not match.
-                  </div>
+                    </div>
+                    : <div></div>
+                  }
+                  {props.passwordSame
+                    ?
+                    <div className="error mt-1">
+                      New password can not be the same as the old password
+                    </div>
                     : <div></div>
                   }
                 </div>
 
               </div>
-
-              
-
             </div>
 
             <hr className="hrBoxes" />
@@ -106,7 +110,6 @@ const Access = (props) => {
             }
 
             <div>
-             
 
               {props.passwordChanged
                 ?

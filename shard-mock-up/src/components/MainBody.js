@@ -46,6 +46,7 @@ class MainBody extends Component {
       passwordError: false,
       passwordNotMatch: false,
       passwordChanged: false,
+      passwordSame: false,
       newPassword: "",
       confirmPassword: "",
     }
@@ -291,7 +292,18 @@ class MainBody extends Component {
       console.log(this.state.passwordNotMatch)
     }
 
-    if (this.state.newPassword.length !== 0 && this.state.newPassword.length >=6 && this.state.newPassword === this.state.confirmPassword && this.state.enteredPassword.length >= 6) {
+    if (this.state.newPassword === this.state.confirmPassword && this.state.enteredPassword === this.state.newPassword) {
+      console.log("New password can not be the same as the old password")
+      this.setState({
+        passwordSame: true,
+        enteredPassword: "",
+        newPassword: "",
+        confirmPassword: ""
+      })
+      console.log(this.state.passwordNotMatch)
+    }
+
+    if (this.state.newPassword.length !== 0 && this.state.newPassword.length >= 6 && this.state.newPassword === this.state.confirmPassword && this.state.enteredPassword.length >= 6 && this.state.enteredPassword !== this.state.newPassword) {
       this.setState({
         passwordChanged: true,
         enteredPassword: "",
@@ -448,6 +460,7 @@ class MainBody extends Component {
           passwordError={this.state.passwordError}
           passwordNotMatch={this.state.passwordNotMatch}
           passwordChanged={this.state.passwordChanged}
+          passwordSame={this.state.passwordSame}
           hidden={this.state.hidden}
           showPassword={this.showPassword}
           captureNewPassword={this.captureNewPassword}
