@@ -31,6 +31,7 @@ const Access = (props) => {
                     placeholder="Enter Current Password"
                     value={props.enteredPassword}
                     type={props.hidden ? "password" : "text"}
+                    required
                   />
                 </div>
 
@@ -48,7 +49,9 @@ const Access = (props) => {
                     <input
                       className="pl-2 input-field inputStyle1"
                       placeholder="Enter New Password"
+                      onChange={(e) => props.captureNewPassword(e)}
                       type={props.hidden ? "password" : "text"}
+                      required
                     />
                   </div>
                 </div>
@@ -59,7 +62,9 @@ const Access = (props) => {
                     <input
                       className="pl-2 input-field inputStyle1"
                       placeholder="Enter New Password"
+                      onChange={(e) => props.captureConfirmPassword(e)}
                       type={props.hidden ? "password" : "text"}
+                      required
                     />
                   </div>
                 </div>
