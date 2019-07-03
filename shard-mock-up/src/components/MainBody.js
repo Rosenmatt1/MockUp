@@ -273,21 +273,30 @@ class MainBody extends Component {
 
     if (this.state.enteredPassword.length < 6) {
       this.setState({
-        passwordError: true
+        passwordError: true,
+        enteredPassword: "",
+        newPassword: "",
+        confirmPassword: ""
       })
     }
 
     if (this.state.newPassword !== this.state.confirmPassword) {
       console.log("Passwords don't match!")
       this.setState({
-        passwordNotMatch: true
+        passwordNotMatch: true,
+        enteredPassword: "",
+        newPassword: "",
+        confirmPassword: ""
       })
       console.log(this.state.passwordNotMatch)
     }
 
-    if (this.state.newPassword !== this.state.confirmPassword && this.state.enteredPassword.length >= 6) {
+    if (this.state.newPassword === this.state.confirmPassword && this.state.enteredPassword.length >= 6) {
       this.setState({
-        passwordChanged: true
+        passwordChanged: true,
+        enteredPassword: "",
+        newPassword: "",
+        confirmPassword: ""
       })
     }
 
