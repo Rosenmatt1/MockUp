@@ -311,7 +311,6 @@ class MainBody extends Component {
         confirmPassword: ""
       })
     }
-
   }
 
   closeToast = () => {
@@ -395,12 +394,12 @@ class MainBody extends Component {
                   </div>
                   <div className="textBox my-4">
 
-                      <input
-                        className="mr-1 inputStyle"
-                        onChange={this.checkedSetting}
-                        checked={this.state.checked}
-                        type="checkbox"
-                      />
+                    <input
+                      className="mr-1 inputStyle"
+                      onChange={this.checkedSetting}
+                      checked={this.state.checked}
+                      type="checkbox"
+                    />
 
                     Take into account Apple commision charges (30%)
                   </div>
