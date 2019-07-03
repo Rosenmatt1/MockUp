@@ -203,10 +203,10 @@ a {
   justify-content: center;
 }
 
-.flexColumn1 {
+.flexColumnSpace {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .fullWidth {
@@ -297,13 +297,11 @@ a {
 }
 
 .cloudContainer {
-  display: flex;
-  width: 9%;
+  margin-right: 1rem;
 }
 
 .progressContainer {
   width: 86%;
-  margin-left: -1.3rem;
 }
 
 .ccMonthWidth {
@@ -312,6 +310,15 @@ a {
 
 .ccCodeWidth {
   width: 13%
+}
+
+.colThird {
+  height: 33%;
+  padding-top: 1rem;
+}
+
+.rightHeight {
+  min-height: 150px;
 }
 
 

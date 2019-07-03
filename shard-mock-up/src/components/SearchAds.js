@@ -40,7 +40,7 @@ class SearchAds extends Component {
               <div className="row mt-3 py-3 spacer rightContent">
                 <div className="row ml-2 userFlex">
                   {this.props.active2
-                    ? <i className="fas fa-circle fa-sm active"></i>
+                    ? <i className="fas fa-circle fa-sm active "></i>
                     : <i className="fas fa-circle fa-sm lightIcon"></i>
                   }
                   <div className="ml-3">
@@ -86,8 +86,8 @@ class SearchAds extends Component {
 
                 </div>
                 : <div className="row mt-3 py-4 rightContent">
-                  <i className="ml-2 fas fa-cloud-upload-alt fa-lg darkerGray"></i>
-                  <div className="text ml-3"> Drop archive with API certificate here or choose <a onClick={this.props.openUser} href="/">choose file</a> to add new account </div>
+                  <i className="ml-2 fas fa-cloud-upload-alt fa-lg darkerGray cloudContainer"></i>
+                  <div className="text progressContainer"> Drop archive with API certificate here or choose <a onClick={this.props.openUser} href="/">choose file</a> to add new account </div>
                 </div>
               }
 
