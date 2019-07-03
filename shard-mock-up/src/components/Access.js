@@ -110,7 +110,7 @@ const Access = (props) => {
 
               {props.passwordChanged
                 ?
-                <div className="mt-1">
+                <div className="active mt-1 ml-2">
                   Password Successfully Changed
                   </div>
                 : <div></div>
