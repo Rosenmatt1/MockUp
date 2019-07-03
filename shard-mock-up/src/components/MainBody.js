@@ -285,30 +285,12 @@ class MainBody extends Component {
       console.log(this.state.passwordNotMatch)
     }
 
-
     if (this.state.newPassword !== this.state.confirmPassword && this.state.enteredPassword.length >= 6) {
       this.setState({
         passwordChanged: true
       })
     }
 
-
-    // if (this.state.newPassword !== this.state.confirmPassword)
-    // {
-    //   this.setState({
-    //     passwordNotMatch: true
-    //   })
-    // } 
-    // else if (this.state.enteredPassword.length < 6) {
-    //   this.setState({
-    //     passwordError: true
-    //   })
-    // } 
-    // else {
-    //   this.setState({
-    //     passwordChanged: true
-    //   })
-    // }
   }
 
   closeToast = () => {
@@ -466,11 +448,10 @@ class MainBody extends Component {
           passwordCurrent={this.passwordCurrent}
           passwordCheck={this.passwordCheck}
           passwordError={this.state.passwordError}
-          passwordNotMatch={this.passwordNotMatch}
-          passwordChanged={this.passwordChanged}
+          passwordNotMatch={this.state.passwordNotMatch}
+          passwordChanged={this.state.passwordChanged}
           hidden={this.state.hidden}
           showPassword={this.showPassword}
-          enteredPassword={this.state.enteredPassword}
           captureNewPassword={this.captureNewPassword}
           captureConfirmPassword={this.captureConfirmPassword}
         />

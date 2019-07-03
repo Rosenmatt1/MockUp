@@ -79,8 +79,8 @@ const Access = (props) => {
 
                 {props.passwordChanged
                   ?
-                  <div className="error mt-1">
-                    Incorrect Password.
+                  <div className="mt-1">
+                    Password Successfully Changed
                   </div>
                   : <div></div>
                 }
