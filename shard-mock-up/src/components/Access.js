@@ -17,9 +17,9 @@ const Access = (props) => {
 
             <div className="row">
               <div className="pl-2 flexColumn left">
-                <div className="textBox"> CurrentPassword </div>
+                <div className="textBox"> Current password </div>
                 <div className="textBox my-4"> New password </div>
-                <div className="textBox"> Confirm Password </div>
+                <div className="textBox"> Confirm password </div>
               </div>
 
               <div className="flexColumn right">

@@ -383,23 +383,12 @@ class MainBody extends Component {
                   </div>
                   <div className="textBox my-4">
 
-                    {this.state.checked
-                      ?
                       <input
                         className="mr-1 inputStyle"
-                        onClick={this.checkedSetting}
-                        value={this.state.checked}
-                        type="checkbox"
-                        checked
-                      />
-                      :
-                      <input
-                        className="mr-1 inputStyle"
-                        onClick={this.checkedSetting}
-                        value={this.state.checked}
+                        onChange={this.checkedSetting}
+                        checked={this.state.checked}
                         type="checkbox"
                       />
-                    }
 
                     Take into account Apple commision charges (30%)
                   </div>

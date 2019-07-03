@@ -203,6 +203,12 @@ a {
   justify-content: center;
 }
 
+.flexColumn1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .fullWidth {
   width: 100%;
 }
@@ -248,7 +254,7 @@ a {
 .icon-input { 
   color: #D5DBE6; 
   min-width: 50px; 
-  float:right;
+  float: right;
 } 
 
 .icon-input:hover { 
