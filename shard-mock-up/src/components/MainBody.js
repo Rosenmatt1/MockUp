@@ -144,10 +144,15 @@ class MainBody extends Component {
   }
 
   theIncrementor2 = () => {
+    
     let interval = setInterval(() => {
       this.setState({
         incrementor2: this.state.incrementor2 + 5,
+      }, () => {
+          console.log(this.state.incrementor2)
       })
+
+
       if (this.state.timesClicked > 1) {
         if (this.state.incrementor2 >= 100) {
           clearInterval(interval)
@@ -155,7 +160,8 @@ class MainBody extends Component {
             accountToast: true,
             progress2: false,
             open: true,
-            timesClicked: 0
+            timesClicked: 0,
+            incrementor2: 0
           })
           setTimeout(() => {
             this.setState({
