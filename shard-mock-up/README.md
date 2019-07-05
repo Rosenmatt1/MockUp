@@ -8,6 +8,5 @@ Tech Used:
 
 Deployed Site:  https://long-form-pro.firebaseapp.com/
 
-Demo:
 ![Settings Long Form](https://media.giphy.com/media/jVYa7yw9wBgyaaP1Yh/giphy.gif)
 
